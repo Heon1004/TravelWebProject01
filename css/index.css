@@ -1,0 +1,233 @@
+body{box-sizing: border-box; margin: 0; padding: 0; height: 100%;}
+
+header {margin:0 150px}
+main{ display: block;} 
+
+/*Header*/
+.hd-menu{
+    display: block;
+    background-size: 1920px 280px;
+}
+.logo-con{
+    width: 120px;
+    text-align: center;
+    height: 30px;
+    padding: 13px 20px;
+    display: inline-block;
+}
+.func_con{
+    padding: 10px 40px;
+    position:relative;
+    float: right;
+}
+.notice-btn,.ordersearch-btn{
+    position: relative;
+    display:flex;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    right: 20px;
+    padding: 0px 10px;
+    margin: 0 5px;
+}
+.account-con{
+    text-align:center;
+    height: 25px;
+    float: right;
+    font-size: 16px;
+}
+.register-btn,.login-btn{
+    text-align: center;
+    padding: 0px 20px;
+}
+
+nav{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 10px;
+}
+.nav-con{
+    position: relative;
+    margin: 0 200px 0px 0;    
+}
+.nav-item{
+    /*pageのリンクが下の線がなくなる*/
+    text-decoration: none;
+    /*ulの丸を消す*/
+    list-style:none;
+    /* position: absolute; */
+    text-align: left;
+    display: inline-flex;
+    margin: 0 10px;
+    font-size: 20px;
+}
+/*Main*/
+.notice-box{
+    text-align: left;
+    padding: 0 150px 0px 150px;
+}
+.online-notice{
+    padding: 5px 16px 25px 16px;
+}
+.notice-title{
+    margin: 0 24px 0 0;
+}
+.notice-item, .notice-title{
+    text-decoration: underline;
+    text-align: left;
+    font-size: 14px;
+    list-style:none;
+    margin: 0 10px 0 0;
+    float: left;
+    padding: 0 15px;
+    display: inline-flex;
+    justify-content: space-between;
+    float:inline-start;
+}
+.home-con{
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    background-size: contain;
+}
+.home-img{
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.home-search-con{
+    position: relative;
+    float: left;
+    margin: 100px 150px 0 150px;
+}
+.search-holder{
+    text-align: left;
+    padding: 0 0 0 25px;
+    
+}
+.search-list{
+    display: inline-flex;
+    text-align: left;
+    margin: 0 20px 0 15px;
+    padding: 0 5px 0 5px;
+    font-size: 18px;
+}
+.search-box-con{
+    box-sizing: border-box;
+    width: 100%;
+}
+.search-box{
+    display: block;
+    position: relative;
+    height: 180px;
+    padding: 10px 20px;
+    margin: 10px 15px 0px 15px;
+    
+}
+/*後でTextboxサイズ変更する*/
+.search-item{
+    margin: 10px 0 0 30px;
+    padding: 0 0 0 15px;
+    text-align: left;
+    font-size: 18px;
+    float: left;
+    height: 80px;
+    box-sizing:border-box;
+    width: 40%;
+    border: 1px solid black;
+}
+.review-con{
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    height: 28px;
+}
+.review-box{
+    padding: 2px 0 0px 0;
+    margin: 0px 15px 0px 15px;
+    position: relative;
+    
+}
+.review-title{
+    margin: 0 0 0 100px;
+    padding: 0 20px;
+    display: inline-block;
+}
+.review-item{
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 0 20px;
+    text-align: center;
+    background-color: yellowgreen;
+    
+}
+.home-wrapper{
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+}
+.recommend-con{
+    margin: 0 150px;
+    margin-bottom: 48px;
+    border: 1px solid black;
+}
+.recommend-module{
+    text-align: center;
+    margin-bottom: 48x;
+}
+.recommend-module-title{
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    margin-bottom: 48px;
+}
+
+.tab-con{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+}
+
+.tab-title{
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 400;
+    text-align: center;
+    margin: 40px 30px;
+}
+.tab-item{
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 16px 0 0;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.content-con{
+    
+    display: inline-block;
+    position: relative;
+    width: 23%;
+    justify-content: space-between;
+}
+.recommend-content{
+    margin: 0 8px 25px 0;
+    border: 1px solid black;
+}
+.item-img{
+    text-align: center;
+}
+.item-title{
+    text-align: left;
+}
+.item-review{
+    text-align: left;
+}
+.item-price{
+    text-align: left;
+}
