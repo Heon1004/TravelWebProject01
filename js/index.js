@@ -1,3 +1,16 @@
+/*nav押したらactive追加後で修正する予定*/
+function navTap(event, id) {
+  var id = id;
+  
+  if(document.getElementById(id).className == "nav-link active"){
+    //replace関数が適用されない。
+    document.getElementById(id).className = "nav-link";
+  }else{
+    document.getElementById(id).className += " active";
+  }
+  console.log(id);
+}
+
 function searchTap(event, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tab-content");

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/tap.css">
     <!--Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
@@ -29,13 +28,13 @@
     <nav>
         <div class="nav-con">
             <ul>
-                <li class="nav-item" id="nav-hotel"><a href="" >ホテル</a></li>
-                <li class="nav-item"><a href="" >航空券</a></li>
-                <li class="nav-item"><a href="" >レンタカー</a></li>
+                <li class="nav-item" id="nav-hotel"><a href="hotelForm.html" onclick="navTap(event,this.id)" id="hotel-nav"  class="nav-link">ホテル</a></li>
+                <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="air-nav" class="nav-link">航空券</a></li>
+                <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="rent-nav" class="nav-link">レンタカー</a></li>
                 <li class="nav-item"><a href="" >ツアー</a></li>
                 <li class="nav-item"><a href="" >イベント</a></li>
                 <li class="nav-item"><a href="" >初めての方へ</a></li>
-                <li class="nav-item"><a href="" class="nav-item-border"> クチコミ</a></li>
+                <li class="nav-item"><a href="" > クチコミ</a></li>
             </ul>
         </div>
     </nav>
@@ -45,7 +44,7 @@
             <div class="online-notice">
                 <div class="notice-title">最新旅行情報</div>
                 <div class="notice-list">
-                    <div class="notice-item"><a href="">新型コロナ対策</a></div>
+                    <div class="notice-item"><a href="" >新型コロナ対策</a></div>
                     <div class="notice-item"><a href="">安全対策旅行</a></div>
                     <div class="notice-item"><a href="">各航空にてお知らせ</a></div>
                     <div class="notice-item"><a href="">航空にてお知らせ</a></div>
