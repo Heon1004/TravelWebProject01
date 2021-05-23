@@ -1,1 +1,23 @@
-{}
+@charset "UTF-8";
+body{box-sizing: border-box; margin: 0; padding: 0; font-family: 'Sawarabi Gothic', sans-serif;}
+header {margin:0 150px;box-sizing: border-box; padding: 0;}
+a, div.notice-title, div.notice-item{text-decoration:none;}
+/*Header*/
+.hd-menu{display: block;height: 51px;}
+.logo-con{top: 20px;box-sizing:border-box;width: 120px;position: absolute;height: 30px;display: inline-block;}
+.logo-con-link{width: 100%;height: 100%;bottom: 10px; position: relative;display: inline-block; font-size: 18px; font-style: 800; text-align: center;}
+.func_con{padding: 0 5px;position:relative;float: right;}
+
+.notice-btn,.ordersearch-btn{position: relative;display:flex;float: left;text-align: center;font-size: 14px;margin: 0 10px;top: 20px;}
+.account-con{bottom: 10px;float: right;font-size: 16px;}
+
+.register-btn a,.login-btn a{color: black;position: relative;text-align: center;top: 5px;padding: 0px 10px;}
+.account-button {color: #fff;line-height: 50px;}
+.account-button:hover {border-radius: 10px;background-color: slateblue;border: none;color: #fff;transition-duration: 0.4s;}
+.nav-con{width: 100%;height: 100%;position: relative;display: inline-flex;}
+.nav-item{padding: 0 10px 0 10px;/*クチコミだけ右側に線がいないため*//*ulの丸を消す*/list-style:none;/* position: absolute; */text-align: left;display: table-cell;font-size: 18px;padding-bottom: 3px;border-right: 1px solid black;}
+.nav-item a{color: black;}
+.nav-item:hover{color: blue;border-bottom: 1px solid black;padding-bottom: 2px;}
+#nav-hotel{border-left: 1px solid black; padding-left: 10px;}
+
+footer{ margin: 0; padding: 0; height: 50px; text-align: center; position: relative; display: block;}
