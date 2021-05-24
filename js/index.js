@@ -25,6 +25,7 @@ function searchTap(event, tabName) {
     event.currentTarget.className += " active";
 }
 
+//htmlでtab-contentにstyle="display: block;" && none を設定しないと最初に内容の全部が出てくる
 function hotelTap(event, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("hotel-tab-content");
@@ -48,8 +49,13 @@ function keepChecked(value){
   }else{
     document.getElementById(id).className += " active";
   }
-}  
-
+} 
+//jQueryの$(document).ready(function()をJSで
+// document.addEventListener("DOMContentLoaded", function(){
+//   // alert("aaa");
+//   });
+  
+  
 //ブラウザが開いたら実行される
 window.onload = function() {
 

@@ -20,15 +20,15 @@
             <div class="ordersearch-btn"><a href="">予約照会・変更・キャンセル</a></div>
             <div class="notice-btn"><a href="">お知らせ</a></div>
             <div class="account-con">
-                <span class="login-btn" ><a href="login.html" class="account-button">ログイン</a></span>
-                <span class="register-btn"><a href="#" class="account-button">会員登録</a></span>
+                <span class="login-btn" ><a href="./Member/login.html" class="account-button">ログイン</a></span>
+                <span class="register-btn"><a href="./Member/join.html" class="account-button">会員登録</a></span>
             </div>
         </div>
     </div>
     <nav>
         <div class="nav-con">
-            <ul>
-                <li class="nav-item" id="nav-hotel"><a href="hotelForm.html" onclick="navTap(event,this.id)" id="hotel-nav"  class="nav-link">ホテル</a></li>
+            <ul><!--後でNav押したらActive状態にさせ、bg-colorが適用されるように-->
+                <li class="nav-item" id="nav-hotel"><a href="./Hotel/hotelList.html" onclick="navTap(event,this.id)" id="hotel-nav"  class="nav-link">ホテル</a></li>
                 <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="air-nav" class="nav-link">航空券</a></li>
                 <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="rent-nav" class="nav-link">レンタカー</a></li>
                 <li class="nav-item"><a href="" >ツアー</a></li>
@@ -64,12 +64,12 @@
                     <div class="search-box">
                         <div class="tab-content" id="hotel-tap" style="display: block;">
                             <div class="search-item-hotel"><label>目的地・ホテル名<input type="text" class="content-input" name="searhc-hotel" placeholder="地域名・空港・都市・ランドマーク"></label></div>
-                            <div class="search-item-hotel"><label>チェックイン<input type="date" name="start-date" id="start-date" class="content-input" ></label></div>
-                            <div class="search-item-hotel"><label>チェックアウト<input type="date" name="end-date" id="end-date" class="content-input"></label> </div>
+                            <div class="search-item-hotel"><label>チェックイン<input type="date" name="start-date" id="start-date" class="content-input-date" ></label></div>
+                            <div class="search-item-hotel"><label>チェックアウト<input type="date" name="end-date" id="end-date" class="content-input-date"></label> </div>
                             <div class="search-item-hotel">
-                                <label class="guest">部屋<input type="text" name="room" placeholder="部屋" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></label>
-                                <label class="guest">大人<input type="text" name="adult" placeholder="大人" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
-                                <label class="guest">子供<input type="text" name="child" placeholder="子供" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
+                                <label class="guest">部屋<input type="text" name="room" value="1" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></label>
+                                <label class="guest">大人<input type="text" name="adult" value="2" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
+                                <label class="guest">子供<input type="text" name="child" value="0" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
                             </div>
                             <div class="review-con">
                                 <button type="submit" class="search-submit" value="airplane">検索</button>
@@ -85,8 +85,8 @@
                         <div class="tab-content" id="airplane-tap" style="display: none;">
                             <div class="search-item-airplane-2"><span>利用空港</span>
                                 <input type="text" class="content-input" placeholder="出発空港"><input type="text" class="content-input" placeholder="到着空港"></div>
-                            <div class="search-item-airplane"><span> 旅行期間<p>1泊</p></span><input type="date" name="start-date" id="start-date-air" class="content-input" >
-                                <input type="date" name="end-date" id="end-date-air" class="content-input" ></div>
+                            <div class="search-item-airplane"><span> 旅行期間<p>1泊</p></span><input type="date" name="start-date" id="start-date-air" class="content-input-date" >
+                                <input type="date" name="end-date" id="end-date-air" class="content-input-date" ></div>
                             <div class="review-con">
                                 <button type="submit" class="search-submit" value="airplane">検索</button>
                                 <div class="review-box">
@@ -96,9 +96,9 @@
                             </div>
                         </div>
                         <div class="tab-content"id="rentcar-tap" style="display: none;">
-                            <div class="search-item-rentcar"><label>出発場所<input type="text" class="content-input" placeholder="空港・地域名・ホテル名"></label></div>
-                            <div class="search-item-rentcar"><label>出発日時<input type="date" name="start-date" id="start-date-rentcar" class="content-input" ></label></div>
-                            <div class="search-item-rentcar"><label>返却日時<input type="date" name="end-date" id="end-date-rentcar" class="content-input"></label></div>
+                            <div class="search-item-rentcar"><label>出発場所</label><input type="text" class="content-input" placeholder="空港・地域名・ホテル名"></div>
+                            <div class="search-item-rentcar"><label>出発日時</label><input type="date" name="start-date" id="start-date-rentcar" class="content-input-date" ></div>
+                            <div class="search-item-rentcar"><label>返却日時</label><input type="date" name="end-date" id="end-date-rentcar" class="content-input-date"></div>
                             <div class="review-con">
                                 <button type="submit" class="search-submit" value="airplane">検索</button>
                                 <div class="review-box">
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="hotel-tab-content" id="kantou-tap">
+                            <div class="hotel-tab-content" id="kantou-tap" style="display: block;">
                                 <div class="content-box">
                                     <div class="recommend-content">
                                         <div class="content-item">
@@ -164,58 +164,59 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="link-more"><a href="">もっと見る</a></div>
-                        </div>
-                        <div class="hotel-tab-content" id="okinawa-tap">
-                            <div class="content-box">
-                                <div class="recommend-content">
-                                    <div class="content-item">
-                                        <div class="item-img"><a class="item-img-link" href="#" title="ホテル" target="_blank" ></a></div>
-                                        <div class="item-title">ホテル</div>
-                                            <div class="item-review">レビュー</div>
-                                            <div class="item-price">安値<p>22.500円</p></div>
+                            <div class="link-more"><a href="./Hotel/hotelList.html">もっと見る</a></div>
+                        
+                            <div class="hotel-tab-content" id="okinawa-tap" style="display: none;">
+                                <div class="content-box">
+                                    <div class="recommend-content">
+                                        <div class="content-item">
+                                            <div class="item-img"><a class="item-img-link" href="#" title="ホテル" target="_blank" ></a></div>
+                                            <div class="item-title">ホテル</div>
+                                                <div class="item-review">レビュー</div>
+                                                <div class="item-price">安値<p>22.500円</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-box">
+                                    <div class="recommend-content">
+                                        <div class="content-item">
+                                            <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
+                                            <div class="item-title">ホテル</div>
+                                                <div class="item-review">レビュー</div>
+                                                <div class="item-price">安値<p>22.500円</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-box">
+                                    <div class="recommend-content">
+                                        <div class="content-item">
+                                            <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
+                                            <div class="item-title">ホテル</div>
+                                                <div class="item-review">レビュー</div>
+                                                <div class="item-price">安値<p>22.500円</p></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="content-box">
-                                <div class="recommend-content">
-                                    <div class="content-item">
-                                        <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
-                                        <div class="item-title">ホテル</div>
-                                            <div class="item-review">レビュー</div>
-                                            <div class="item-price">安値<p>22.500円</p></div>
+                            <div class="hotel-tab-content" id="hokkaido-tap" style="display: none;">
+                                <div class="content-box">
+                                    <div class="recommend-content">
+                                        <div class="content-item">
+                                            <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
+                                            <div class="item-title">ホテル</div>
+                                                <div class="item-review">レビュー</div>
+                                                <div class="item-price">安値<p>22.500円</p></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content-box">
-                                <div class="recommend-content">
-                                    <div class="content-item">
-                                        <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
-                                        <div class="item-title">ホテル</div>
-                                            <div class="item-review">レビュー</div>
-                                            <div class="item-price">安値<p>22.500円</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hotel-tab-content" id="hokkaido-tap">
-                            <div class="content-box">
-                                <div class="recommend-content">
-                                    <div class="content-item">
-                                        <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
-                                        <div class="item-title">ホテル</div>
-                                            <div class="item-review">レビュー</div>
-                                            <div class="item-price">安値<p>22.500円</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-box">
-                                <div class="recommend-content">
-                                    <div class="content-item">
-                                        <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
-                                        <div class="item-title">ホテル</div>
-                                            <div class="item-review">レビュー</div>
-                                            <div class="item-price">安値<p>22.500円</p></div>
+                                <div class="content-box">
+                                    <div class="recommend-content">
+                                        <div class="content-item">
+                                            <div class="item-img"><a class="item-img-link" href="#" title="新宿ホテル" target="_blank"></a></div>
+                                            <div class="item-title">ホテル</div>
+                                                <div class="item-review">レビュー</div>
+                                                <div class="item-price">安値<p>22.500円</p></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

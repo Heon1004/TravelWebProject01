@@ -7,7 +7,7 @@
 .notice-item a:hover{ background-color: aliceblue;}
 .notice-item , .notice-title{text-align: left;font-size: 12px;margin: 0 10px 0 0;float: left;padding: 0 10px;}
 .home-con{box-sizing: border-box;width: 100%;height: 100%;position: relative;float: left;background-size: contain;}
-.home-img{background-repeat: no-repeat;margin: 0;padding: 0;height: 80%;width: 100%;position: absolute; opacity: 0.8; background-image: url(../images/bg-img.jpg); background-size: cover;}
+.home-img{background-repeat: no-repeat;margin: 0;padding: 0;height: 80%;width: 100%;position: absolute; opacity: 0.2; background-image: url(../images/bg-img.jpg); background-size: cover;}
 .home-search-con{position: relative; display: block;margin: 70px 150px 24px 150px; padding: 0;}
 
 /*Tap CSS*/
@@ -19,7 +19,7 @@
 .tab-link:hover  {background-color: #2EE59D;box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);color: #fff;transform: translateY(-2px);}
 .tab-con{box-sizing: border-box; width: 100%; position: relative;}
 .tab-title{font-size: 28px;line-height: 34px;font-weight: 400;text-align: center;margin: 40px 30px;}
-.tab-item{display: inline-block;font-size: 16px;margin: 0 16px 0 0;padding: 8px 16px 8px 16px;cursor: pointer;border: 1px solid black;}
+.tab-item{display: inline-block; font-size: 16px;margin: 0 16px 0 0;padding: 8px 16px 8px 16px;cursor: pointer;}
 .content-box{display: inline-block;position: relative;width: 23%;justify-content: space-between;}
 .tab-link{color: black; background-color: #fff;}
 .tab-content{position: relative;display: inline-flex;height: 100%;width: 100%;}
@@ -27,22 +27,30 @@
 .search-con{ box-sizing: border-box; display: block; width: 100%; background-color: rgba(255, 255, 255, 0.4); }
 .search-box{display: block; height: 100%;width: 100%;}
 .search-item-hotel{padding: 0 15px 15px 15px;text-align: left;font-size: 18px;display: inline-flex;width: 25.2%;height: 80px;box-sizing:border-box;margin: 0 -3px;}
-.content-input{display: inline-flex;top: 5px;margin-right: 0;float: right;position: relative;width: 100%;height: 60%;border: 1px solid darkgray;}
-.content-input:focus{ outline:none; border-bottom: 3px solid slateblue; padding-bottom: 2px;}
-.search-item-airplane-2 > .content-input , .search-item-airplane > .content-input {width: 230px; top: 28px; left: 20px;}
-.search-item-airplane-2 > span{color: black;}
-.search-item-airplane > span , .search-item-airplane-2 > span{height: 25px;}
-.search-item-airplane > span > p{font-size: 16px; text-align: center; font-weight: 800;}
-.search-item-rentcar > label > .content-input{top: 28px; width: 280px;}
-.search-item-airplane-2{padding: 0 15px 15px 15px;text-align: left;float: left;display: inline-flex;width: 50%;height: 80px;box-sizing:border-box;border: 1px solid darkgrey;}
-.search-item-airplane{padding: 0 15px 15px 15px;text-align: left;float: left;display: inline-flex;width: 50%;height: 80px;box-sizing:border-box;border: 1px solid darkgrey;}
-.search-item-rentcar{padding: 0 15px 15px 15px;text-align: left;display: inline-flex;width: 33.5%;height: 80px;box-sizing:border-box;border: 1px solid darkgrey;margin: 0 -3px;}
+.content-input , .content-input-date{display: inline-flex;;margin-top:  5;float: right;position: relative;width: 100%;height: 60%;border: 1px solid darkgray; }
+.content-input:focus , .content-input-date:focus{ outline:none; border-bottom: 3px solid slateblue; padding-bottom: 2px;}
+.content-input-date{text-align: center; font-size: 18px;}
+.search-item-airplane-2 > .content-input , .search-item-airplane > .content-input {width: 50%; margin-top: 20px;}
+.search-item-airplane-2 > span{color: black; text-align: left;}
+.search-item-airplane > .content-input{text-align: center; font-size: 18px;}
+.search-item-airplane > span , .search-item-airplane-2 > span{height: 30%; width: 40%;}
+.search-item-airplane > span > p{font-size: 16px; text-align: center; font-weight: 800; width: 100%;}
+.search-item-rentcar > label > .content-input{ width: 100%; }
+.search-item-rentcar > .content-input{margin-top: 20px;}
+.search-item-airplane-2{padding: 0 15px 15px 15px;text-align: left;float: left;display: inline-flex;width: 50%;height: 80px;box-sizing:border-box;}
+.search-item-airplane{padding: 0 15px 15px 15px;text-align: left;float: left;display: inline-flex;width: 50%;height: 80px;box-sizing:border-box;}
+.search-item-rentcar{padding: 0 15px 15px 15px;text-align: left;display: inline-flex;width: 33.5%;height: 80px;box-sizing:border-box;margin: 0 -3px;}
+.search-item-rentcar>label{ text-align: left; height: 100%; width: 30%;}
+.search-item-rentcar> .content-input-date{margin: 20px 0 0 0;}
+.search-item-airplane > .content-input-date{margin-top: 20px;}
+.search-item-rentcar>label>input{width: 100%; height: 100%;}
 .search-submit{ float: right; position: relative;  text-align: center; text-decoration: none; font-size: 16px; width: 60px; margin: 3px 5px 0 10px; border-radius: 8px; background-color: #fff; color: black; border: 1px solid darkgray; transition-duration: 0.4s; cursor: pointer;}
 .search-submit:hover {background-color: slateblue;color: black;}
 label, .search-item-airplane-2 > p{color: black; font-size: 16px;}
 label{text-align: left; width: auto;}
 .search-item-hotel >.guest{position: relative; width: 35%; height: 25px; margin: 0 10px 0 10px; text-align: center;}
-.room-input{width: 40px; margin-top: 10px; text-align: center;}
+.room-input{width: 40px; margin-top: 10px; text-align: center; border: 1px solid darkgray;}
+.room-input:focus{border-bottom: 3px solid slateblue;  outline:none;}
 
 .review-con{ box-sizing: border-box; display: inline-block; width: 100%; position: relative; height: 34px;}
 .review-box{ padding: 2px 0 0 0; margin: 0px 15px 0px 15px; position: relative; display: inline-flex;}
