@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/hotel_list_info.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <title>旅行はどこ?ここ!　ホテル・航空券・レンタカー</title>
+</head>
+<body>
+<header>
+    <div class="hd-menu">
+        <div class="logo-con">
+            <span><a href="../index.html" class="logo-con-link">旅行はここ</a></span>
+        </div>
+        <div class="func_con">
+            <div class="ordersearch-btn"><a href="">予約照会・変更・キャンセル</a></div>
+            <div class="notice-btn"><a href="">お知らせ</a></div>
+            <div class="account-con">
+                <span class="login-btn" ><a href="../Member/login.html" class="account-button">ログイン</a></span>
+                <span class="register-btn"><a href="#" class="account-button">会員登録</a></span>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="nav-con">
+            <ul>
+                <li class="nav-item" id="nav-hotel"><a href="./hotel_list.html" onclick="navTap(event,this.id)" id="hotel-nav"  class="nav-link">ホテル</a></li>
+                <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="air-nav" class="nav-link">航空券</a></li>
+                <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="rent-nav" class="nav-link">レンタカー</a></li>
+                <li class="nav-item"><a href="" >ツアー</a></li>
+                <li class="nav-item"><a href="" >イベント</a></li>
+                <li class="nav-item"><a href="" >初めての方へ</a></li>
+                <li class="nav-item"><a href="" > クチコミ</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <main>
+        <div class="home-con">
+            <div class="home-search-con">
+                <div class="search-con">
+                    <div class="search-box">
+                        <div class="tab-content" id="hotel-tap" style="display: block;">
+                            <div class="search-item-hotel"><label>目的地・ホテル名<input type="text" class="content-input" name="searhc-hotel" placeholder="地域名・空港・都市・ランドマーク"></label></div>
+                            <div class="search-item-hotel"><label>チェックイン<input type="date" name="start-date" id="start-date" class="content-input" ></label></div>
+                            <div class="search-item-hotel"><label>チェックアウト<input type="date" name="end-date" id="end-date" class="content-input"></label> </div>
+                            <div class="search-item-hotel">
+                                <label class="guest">部屋<input type="text" name="room" value="1" class="room-input"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></label>
+                                <label class="guest">大人<input type="text" name="adult" value="2" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
+                                <label class="guest">子供<input type="text" name="child" value="0" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
+                                <button type="submit" class="search-submit" value="airplane">検索</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-con">
+            <div class="hotel-info-con">
+                <div class="hotel-info-title">
+                    <span>新宿ホテル</span>
+                </div>                
+                <div class="info-img-con">
+                    <div class="info-img-main">
+                        <img src="../images/hotel-img/hotel2/hotel-outside-2-01.jpg" alt="" class="main-img"/>
+                    </div>
+                    <div class="info-img-list">
+                        <div class="info-img"><img src="../images/hotel-img/hotel1/hotel-room-1-01.jpg" alt=""></div>
+                        <div class="info-img"><img src="../images/hotel-img/hotel1/hotel-room-1-02.jpg" alt=""></div>
+                        <div class="info-img"><img src="../images/hotel-img/hotel1/hotel-room-1-03.jpg" alt=""></div>
+                        <div class="info-img"><img src="../images/hotel-img/hotel1/hotel-room-1-04.jpg" alt=""></div>
+                        <div class="info-img"><img src="../images/hotel-img/hotel1/hotel-room-1-05.jpg" alt=""></div>
+                        <div class="info-img"><img src="../images/hotel-img/hotel1/hotel-room-1-06.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="hotel-info-box">
+                    <div class="room-msg"><span>注目:</span>残り部屋は10室</div>
+                    <div class="room-price"><span>22,500円</span><a href="">部屋選択</a></div>
+                    <div class="photo-box"><a href="">写真をもっと見る</a></div>
+                    <div class="review-score">
+                        <p>4.6/5</p>
+                        <a href="">レビュー100件</a>
+                    </div>
+                    <div class="address"><span>7-10-5 西新宿 新宿区 東京都 160-0023</span></div>
+                    <div class="map-con">
+                        <div class="map-img">img</div>
+                        <div class="map-link"><a href="">マップを表示</a></div>
+                    </div>
+                    <div class="option-box"><span>Wi-Fi 空港ピックアップ レストラン Bar</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-type-con">
+            <div class="type-tap-box">
+                <div class="tap-nav"><!--눌렀을때 하단 위치로 가게끔-->
+                    <div class="tap-item"><button></button></div>
+                    <div class="tap-item"><button></button></div>
+                    <div class="tap-item"><button></button></div>
+                </div>
+            </div>
+        </div>
+        <div class="roomlist-con">
+            <div class="roomlist-box">
+                <div class="roomtitle">
+                    <div class="room-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="roominfo-con">
+                        <div class="room-type"></div>
+                        <div class="room-option-con">
+                            <div class="room-size">
+                                <span></span>
+                            </div>
+                            <div class="room-option">
+                                <div class="room-option-item"></div>
+                                <div class="room-option-item"></div>
+                                <div class="room-option-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-package-con">
+                    <div class="package-event"><!--no watting & no breakfast & cancle is free-->
+                        <div class="event-item"></div>
+                        <div class="event-item"></div>
+                        <div class="event-item"></div>
+                    </div>
+                    <div class="max-person"></div>
+                    <div class="packge-option">
+                        <div class="packge-item"></div>
+                        <div class="packge-item"></div><!--bed-->
+                        <div class="packge-item"></div><!--wifi-->
+                    </div>
+                    <div class="price-con">
+                        <div class="price"></div>
+                        <div class="reserve-btn"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review-con">
+            <div class="review-title"></div>
+            <div class="review-list">
+                <div class="user-con">
+                    <div class="user-name"></div>
+                    <div class="use-roomtype"></div>
+                    <div class="use-hotel-date"></div>
+                    <div class="user-reviews"></div>
+                </div>
+            </div>
+            <div class="review-content-con">
+                <div class="review-score"></div>
+                <div class="review-centent-box">
+                    <div class="review-content"></div>
+                    <div class="review-date"></div>
+                </div>
+                <div class="likes"></div>
+            </div>
+        </div>
+    </main>
+<footer>
+   <p>&copy; This is Travel Site</p>
+</footer>
+<script type="text/javascript" src="../js/hotel_list.js" charset="UTF-8"></script>
+</body>
+</html>
