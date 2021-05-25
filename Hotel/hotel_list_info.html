@@ -28,9 +28,9 @@
     <nav>
         <div class="nav-con">
             <ul>
-                <li class="nav-item" id="nav-hotel"><a href="./hotel_list.html" onclick="navTap(event,this.id)" id="hotel-nav"  class="nav-link">ホテル</a></li>
-                <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="air-nav" class="nav-link">航空券</a></li>
-                <li class="nav-item"><a href="" onclick="navTap(event,this.id)" id="rent-nav" class="nav-link">レンタカー</a></li>
+                <li class="nav-item" id="nav-hotel"><a href="./hotel_list.html"  id="hotel-nav"  class="nav-link">ホテル</a></li>
+                <li class="nav-item"><a href=""  id="air-nav" class="nav-link">航空券</a></li>
+                <li class="nav-item"><a href=""  id="rent-nav" class="nav-link">レンタカー</a></li>
                 <li class="nav-item"><a href="" >ツアー</a></li>
                 <li class="nav-item"><a href="" >イベント</a></li>
                 <li class="nav-item"><a href="" >初めての方へ</a></li>
@@ -66,7 +66,7 @@
                 </div>                
                 <div class="info-img-con">
                     <div class="info-img-main">
-                        <img src="../images/hotel-img/hotel2/hotel-outside-2-01.jpg" alt="" class="main-img"/>
+                        <img src="../images/hotel-img/hotel1/hotel-outside-1-01.jpg" alt="" class="main-img"/>
                     </div>
                     <div class="info-img-list">
                         <div class="info-img"><img src="../images/hotel-img/hotel1/hotel-room-1-01.jpg" alt=""></div>
@@ -79,15 +79,15 @@
                 </div>
                 <div class="hotel-info-box">
                     <div class="room-msg"><span>注目:</span>残り部屋は10室</div>
-                    <div class="room-price"><span>22,500円</span><a href="">部屋選択</a></div>
+                    <div class="room-price"><span>22,500円</span><a href="#roomtype-target">部屋選択</a></div>
                     <div class="photo-box"><a href="">写真をもっと見る</a></div>
                     <div class="review-score">
                         <p>4.6/5</p>
-                        <a href="">レビュー100件</a>
+                        <a href="#review-target">レビュー100件</a>
                     </div>
                     <div class="address"><span>7-10-5 西新宿 新宿区 東京都 160-0023</span></div>
                     <div class="map-con">
-                        <div class="map-img">img</div>
+                        <div class="map-img">MAP API</div>
                         <div class="map-link"><a href="">マップを表示</a></div>
                     </div>
                     <div class="option-box"><span>Wi-Fi 空港ピックアップ レストラン Bar</span></div>
@@ -95,46 +95,47 @@
             </div>
         </div>
         <div class="hotel-type-con">
-            <div class="type-tap-box">
-                <div class="tap-nav"><!--눌렀을때 하단 위치로 가게끔-->
-                    <div class="tap-item"><button></button></div>
-                    <div class="tap-item"><button></button></div>
-                    <div class="tap-item"><button></button></div>
-                </div>
-            </div>
+            <ul class="tap-nav"><!--눌렀을때 하단 위치로 가게끔-->
+                <li class="tap-item active" name="roomtype-target"><a href="">ルーム</a></li>
+                <li class="tap-item" name="review-target"><a href="">レビュー</a></li>
+                <li class="tap-item"><a href="">ホテル制約</a></li>
+            </ul>
         </div>
         <div class="roomlist-con">
             <div class="roomlist-box">
-                <div class="roomtitle">
+                <div class="roomt-itle">
                     <div class="room-img">
-                        <img src="" alt="">
+                        <img src="../images/hotel-img/hotel1/hotel-room-1-07.jpg" alt="">
                     </div>
                     <div class="roominfo-con">
-                        <div class="room-type"></div>
+                        <div class="room-type"><button>スーペリア　ツインルーム</button><span>オーシャンビュー</span></div>
                         <div class="room-option-con">
-                            <div class="room-size">
-                                <span></span>
-                            </div>
-                            <div class="room-option">
-                                <div class="room-option-item"></div>
-                                <div class="room-option-item"></div>
-                                <div class="room-option-item"></div>
-                            </div>
+                            <ul class="room-option">
+                                <li>冷蔵庫</li>
+                                <li>TV</li>
+                                <li>バルコニー</li>
+                                <li>エアコン</li>
+                            </ul>
+                        </div>
+                        <div class="room-photo">
+                            <button>写真＆施設設備</button>
                         </div>
                     </div>
                 </div>
                 <div class="room-package-con">
                     <div class="package-event"><!--no watting & no breakfast & cancle is free-->
-                        <div class="event-item"></div>
-                        <div class="event-item"></div>
-                        <div class="event-item"></div>
+                        <ul>
+                            <li title="予約申請したら直ぐに確定になります。">待つ必要ない</li>
+                            <li title="ホテルでお会計の後利用可能">朝食食べ放題 - 別料金 3900円</li>
+                            <li title="キャンセルできません。">特別割引金額</li>
+                        </ul>
                     </div>
-                    <div class="max-person"></div>
-                    <div class="packge-option">
-                        <div class="packge-item"></div>
-                        <div class="packge-item"></div><!--bed-->
-                        <div class="packge-item"></div><!--wifi-->
-                    </div>
+                    <div class="max-person">2人</div>
+                    <ul class="packge-option">
+                        <li class="packge-item"></li>
+                        <li class="packge-item"></li><!--bed-->
+                        <li class="packge-item"></li><!--wifi-->
+                    </ul>
                     <div class="price-con">
                         <div class="price"></div>
                         <div class="reserve-btn"></div>
@@ -162,9 +163,16 @@
             </div>
         </div>
     </main>
-<footer>
-   <p>&copy; This is Travel Site</p>
-</footer>
+    <footer>
+       <p>&copy; This is Travel Site</p>
+    </footer>
+    <div class="top-btn-con">
+        <button class="go-top" onclick="goTop()" >↑</button>
+    </div>
+<!--Jquery CDN JqueryがJSより上にする-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common-jquery.js"></script>
+<!--このようにするのかわからない。。。-->
 <script type="text/javascript" src="../js/hotel_list.js" charset="UTF-8"></script>
 </body>
 </html>

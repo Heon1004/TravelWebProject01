@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*Search-con*/
-.home-con{box-sizing: border-box; float: left; position: relative; background-repeat: no-repeat; background-color: #0f294d;}
+.home-con{box-sizing: border-box; float: left; position: relative; margin-bottom: 20px; background-repeat: no-repeat; background-color: #0f294d;}
 .home-search-con{position: relative; display: block;margin: 10px 150px 10px 150px; padding: 0;}
 .search-con{ box-sizing: border-box; display: block; width: 100%; background-color: #0f294d;; }
 .search-box{display: block; height: 100%;width: 100%;}
@@ -19,8 +19,8 @@ label{text-align: left; width: auto;}
 
 /*main-content-con*/
 .content-con{margin: 0 150px 0 150px; position: relative; display: inline-block; width: auto; height: 100%; box-sizing: border-box;}
-/*side-menu*/
-.left-side-con{ box-sizing: border-box; display: inline-flex;  padding: 20px 20px;  position: relative; float: left; text-align: left; min-width: 21%}
+/*side-menu*/ /*side-con 後でpositionをfixedにする*/
+.left-side-con{ box-sizing: border-box; display: inline-flex;  padding: 20px 20px;  position: relative; float: left; text-align: left; min-width: 21%; background-color: white;}
 .review-box{border-bottom: 1px solid darkgray; padding-bottom: 15px; }
 .review-title{padding-left: 20px;}
 .review-item>label:hover{  cursor: pointer;}
@@ -34,14 +34,14 @@ label{text-align: left; width: auto;}
 /*list-items*/
 .list-con{display: inline-block; position: relative; min-width: 78%;padding-left: 20px; max-height: 130px; box-sizing: border-box;}
 .search-result{display: inline-flex; width: 65%; position: relative; text-align: left;  font-size: 18px; padding: 10px 0;}
-.list-link-box{display: inline-flex; width: 100%; margin-bottom: 10px;  height: 40px; position: relative;}
-.list-item{ width: 20%; text-align: center; border-right: 1px solid darkgray; padding: 7px 0; }
+.list-link-box{display: flex; width: 897px; margin-bottom: 10px;  height: 40px; position: relative; background-color: white;}
+.list-item{ width: 20%; text-align: center; border-right: 1px solid darkgray; padding: 7px 0;  }
 .list-item:hover{border-bottom: 3px solid slateblue;}
 .list-item.active{background-color: slateblue; border-radius: 10px;}
 .list-item.active>span>a{color: white;}
 
 /*info-items*/
-.hotel-info-con{display: inline-flex; position: relative; float: right; background-color: ivory; margin-bottom: 5px; width: 910px; height: 250px; }
+.hotel-info-con{display: inline-flex; position: relative; float: right; background-color: white; margin-bottom: 5px; width: 910px; height: 250px; }
 .info-img-con{position: relative; display: inline-block; width: 100%; margin: 10px; height: auto; background-color: black;}
 .info-hotel-img{display: inline-flex; height: 100%; width: 100%; position: relative;  background-size: contain; background-repeat: no-repeat;}
 .hotel-info-box{width: 100%;  display: inline-block;  position: relative; margin: 10px 0;}

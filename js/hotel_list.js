@@ -29,3 +29,4 @@ function keepChecked(value){
     end = document.getElementById("end-date");
     end.value = endDay;
   }
+
