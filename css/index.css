@@ -64,7 +64,7 @@ label{text-align: left; width: auto;}
 .home-wrapper{width: 100%; margin: 0; position: relative; display: inline-block;}
 .recommend-con{margin: 0 150px;}
 .recommend-module{text-align: center; margin-bottom: 48x; height: 100%; width: 100%; position: relative; }
-.recommend-module-title{font-size: 28px;line-height: 34px;font-weight: 700;text-align: center;padding: 15px 0 15px 0; opacity: 0.9; color: black;}
+.recommend-module-title{font-size: 28px;line-height: 34px;font-weight: 700; text-align: center; padding: 15px 0 15px 0; opacity: 0.9; color: black;}
 .recommend-content{margin: 0 8px 25px 0; width: 100%; height: 100%;}
 
 /*Recooment tap*/
@@ -73,15 +73,16 @@ label{text-align: left; width: auto;}
 .hotel-tab-link:hover  {background-color: #2EE59D;box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);color: #fff;transform: translateY(-2px);}
 .hotel-tab-link{color: black; background-color: #fff;}
 .hotel-tab-con{box-sizing: border-box; width: 100%; height: 100%; position: relative; }
-.hotel-tab-title{font-size: 28px;line-height: 34px;font-weight: 400;text-align: center;margin: 0 0 20px 0;}
+.hotel-tab-title{font-size: 28px;line-height: 34px;font-weight: 400;text-align: center; margin: 0 0 20px 0;}
 .hotel-tab-item{display: inline-block; font-size: 16px;margin: 0 5px 0 0;padding: 8px 16px 8px 16px; cursor: pointer;}
-.hotel-tab-content{position: relative;display: inline-flex;height: 100%;width: 100%; }
+.hotel-tab-content{position: relative; display: inline-flex;height: 100%;width: 100%; }
 .content-box{display: inline-block;  position: relative;width: 24%; margin-bottom: 10px; height: auto; padding: 0 5px 8px 0;}
 .content-item{ width: 100%; height: 100%; display: inline-block; background-color: white;}
-.content-item:hover{border-bottom: 2px solid gray; }
 
 .item-img{text-align: center; position: relative; height: 200px; display: inline-flex; }
 .item-img > a{width: 277px; height: 100%; position: relative; display: block; text-align: left;}
+.item-img a{transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transition: all 0.3s ease-in-out;}
+.content-item a:hover{ -webkit-transform:scale(1.1); }
 .item-img-link-1{background-image: url(../images/hotel-img/hotel1/hotel-outside-1-01.jpg); background-repeat: no-repeat; cursor: pointer; background-size: 100%; background-position: center;}
 .item-img-link-2{background-image: url(../images/hotel-img/hotel2/hotel-outside-2-01.jpg); background-repeat: no-repeat; cursor: pointer; background-size: 100%; background-position: center;}
 .item-img-link-3{background-image: url(../images/hotel-img/hotel3/hotel-outside-3-01.jpg); background-repeat: no-repeat; cursor: pointer; background-size: 100%; background-position: center;}

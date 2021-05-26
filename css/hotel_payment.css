@@ -1,0 +1,30 @@
+/*top-nav*/
+.mark-con{  width: 100; display: block; left: 300px; margin-top: 10px; float: left; position: absolute; }
+.mark-item {display: inline-flex; color: slateblue;}
+.mark-item>span{margin-right: 10px;}
+.mark-item>.mark-item-active{color: slateblue;}
+.mark-item>.num {margin:0 10px; background-color: slateblue; color: white; width: 25px; text-align: center; border-radius: 20px;}
+.mark-item>.num-null{margin:0 10px; background-color: gray; color: white; width: 25px; text-align: center; border-radius: 20px;}
+.mark-item-null{color: gray;}
+
+/*content*/
+.payment-con{width: 1177px; height: 100%; margin: 0 150px; display: inline-block; position: relative; border: 1px solid blue;}
+.payment-wp{width: 700px; box-sizing: border-box; float: left;  margin: 15px; padding: 10px; background-color: white; word-break: break-all;}
+.hotel-info-con{width: 100%; height: 100%;  line-height: 30px; border-bottom:1px dotted gray; padding-bottom: 15px;}
+.hotel-title{display: block; font-size: 28px;}
+.review-score{font-size: 16px; margin: 0;  }
+.hotel-address{font-size: 14px; display: block;}
+.checkin-time{font-size: 16px; font-weight: bold;}
+.hotel-option-item ul{margin: 0; padding: 0;}
+.hotel-option-item li{display: inline-flex; list-style: none; margin-right: 10px;}
+.room-info-link{float: right; background-color: white; border: none; cursor: pointer; font-weight: bold; color: slateblue;}
+.room-info-link:hover{text-decoration: underline;}
+
+.user-date-con{display: block; position: relative; background-color: white; margin-top: 20px;}
+.date-info{display: flex;}
+.date-items{}
+.nights{}
+
+/*side-bar*/
+.side-bar-con{width: 432px; height: 100px; margin: 15px 15px 15px 0; float: right; position: relative;  display: block; background-color: yellow;}
+.side-bar{width: 400px; height: ; padding: 10px; display: block; position: fixed; box-sizing: border-box; background-color: ;}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/hotel_payment.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <title>旅行はどこ?ここ!　ホテル・航空券・レンタカー</title>
+</head>
+<body>
+<header>
+    <div class="hd-menu">
+        <div class="logo-con">
+            <span><a href="../index.html" class="logo-con-link">旅行はここ</a></span>
+        </div>
+        <div class="func_con">
+            <div class="ordersearch-btn"><a href="">予約照会・変更・キャンセル</a></div>
+            <div class="notice-btn"><a href="">お知らせ</a></div>
+            <div class="account-con">
+                <span class="login-btn" ><a href="../Member/login.html" class="account-button">ログイン</a></span>
+                <span class="register-btn"><a href="#" class="account-button">会員登録</a></span>
+            </div>
+        </div>
+        <div class="mark-con">
+            <div class="mark-item"><span class="num">1</span><span class="mark-item-active">ルーム選択</span>></div>
+            <div class="mark-item"><span class="num">2</span><span class="mark-item-active">予約情報</span>></div>
+            <div class="mark-item"><span class="num-null">3</span><span class="mark-item-null">決済</span></div>
+        </div>
+    </div>
+</header>
+    <main>
+        <div class="payment-con">
+            <div class="payment-wp">
+                <div class="hotel-info-con">
+                    <div class="hotel-title"><span>新宿ホテル</span><span class="review-score">★★★</span></div>
+                    <div class="hotel-address"><span>7-10-5 西新宿 新宿区 東京都 160-0023</span></div>
+                    <div class="checkin-time"><span>スーペリア　ツインルーム</span>&<span>チェックイン: 14:00以降</span></div>
+                    <div class="hotel-option-item">
+                        <ul class="option-items">
+                            <li>大人2人</li>
+                            <li>無料WI-FI</li>
+                            <li>ダブルベッド 1</li>
+                            <button class="room-info-link">ルーム情報</button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-date-con">
+                    <div class="date-info">
+                        <div class="date-items"><span>チェックイン</span><input type="date" name="start-date" id="start-date" class="content-input-date" ></div>
+                        <div class="nights">1泊</div>
+                        <div class="date-items"><span>チェックアウト</span><input type="date" name="end-date" id="end-date" class="content-input-date"></div>
+                        <div class="date-items"><span>残りルーム</span><div class="room-count"></div></div>
+                    </div>
+                </div>
+                <div class="arrival-con">
+    
+                </div>
+                <div class="payment-btn-con">
+                    <!-- <div class="payment-btn">
+                        <span></span>
+                        <button></button>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="side-bar-con">
+                <div class="side-bar">
+                    <div class="side-item">
+                        <span class="left-content"></span>
+                        <span class="right-content"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    
+<!--Jquery CDN JqueryがJSより上にする-->
+
+<!--このようにするのかわからない。。。-->
+</body>
+</html>

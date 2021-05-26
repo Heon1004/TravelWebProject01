@@ -64,6 +64,7 @@
                 <div class="hotel-info-title">
                     <span>新宿ホテル</span>
                 </div>                
+                <div class="address"><span>7-10-5 西新宿 新宿区 東京都 160-0023</span></div>
                 <div class="info-img-con">
                     <div class="info-img-main">
                         <img src="../images/hotel-img/hotel1/hotel-outside-1-01.jpg" alt="" class="main-img"/>
@@ -81,23 +82,22 @@
                     <div class="room-msg"><span>注目:</span>残り部屋は10室</div>
                     <div class="room-price"><span>22,500円</span><a href="#roomtype-target">部屋選択</a></div>
                     <div class="photo-box"><a href="">写真をもっと見る</a></div>
-                    <div class="review-score">
+                    <div class="info-review-link">
                         <p>4.6/5</p>
                         <a href="#review-target">レビュー100件</a>
                     </div>
-                    <div class="address"><span>7-10-5 西新宿 新宿区 東京都 160-0023</span></div>
                     <div class="map-con">
                         <div class="map-img">MAP API</div>
                         <div class="map-link"><a href="">マップを表示</a></div>
                     </div>
-                    <div class="option-box"><span>Wi-Fi 空港ピックアップ レストラン Bar</span></div>
+                    <div class="option-box"><span>Wi-Fi 空港ピックアップ レストラン Bar</span><button>全ての施設</button></div>
                 </div>
             </div>
         </div>
         <div class="hotel-type-con">
             <ul class="tap-nav"><!--눌렀을때 하단 위치로 가게끔-->
-                <li class="tap-item active" name="roomtype-target"><a href="">ルーム</a></li>
-                <li class="tap-item" name="review-target"><a href="">レビュー</a></li>
+                <li class="tap-item active" id="roomtype-target"><a href="#roomtype-target">ルーム</a></li>
+                <li class="tap-item"><a href="#review-target">レビュー</a></li>
                 <li class="tap-item"><a href="">ホテル制約</a></li>
             </ul>
         </div>
@@ -123,43 +123,108 @@
                     </div>
                 </div>
                 <div class="room-package-con">
-                    <div class="package-event"><!--no watting & no breakfast & cancle is free-->
-                        <ul>
-                            <li title="予約申請したら直ぐに確定になります。">待つ必要ない</li>
-                            <li title="ホテルでお会計の後利用可能">朝食食べ放題 - 別料金 3900円</li>
-                            <li title="キャンセルできません。">特別割引金額</li>
+                    <div class="room-package-box">
+                        <div class="package-event">
+                            <ul>
+                                <li title="予約申請したら直ぐに確定になります。">待つ必要ない</li>
+                                <li title="ホテルでお会計の後利用可能">朝食食べ放題 - 別料金 3900円</li>
+                                <li title="キャンセルできません。">特別割引金額</li>
+                            </ul>
+                        </div>
+                        <div class="max-person">2人</div>
+                        <ul class="packge-option">
+                            <li class="packge-item">シングルベッド</li>
+                            <li class="packge-item">禁煙</li><!--bed-->
+                            <li class="packge-item"></li><!--wifi-->
                         </ul>
-                    </div>
-                    <div class="max-person">2人</div>
-                    <ul class="packge-option">
-                        <li class="packge-item"></li>
-                        <li class="packge-item"></li><!--bed-->
-                        <li class="packge-item"></li><!--wifi-->
-                    </ul>
-                    <div class="price-con">
-                        <div class="price"></div>
-                        <div class="reserve-btn"></div>
+                        <div class="price-con">
+                            <div class="price">
+                                <span>25,500円</span>
+                                <p>税金込み</p>
+                            </div>
+                            <span class="btn-text">只今決済</span>
+                            <div class="reserve-btn"><a href="./hotel_payment.html">予約</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--RoomType繰り返しが入るところ-->
         <div class="review-con">
-            <div class="review-title"></div>
-            <div class="review-list">
-                <div class="user-con">
-                    <div class="user-name"></div>
-                    <div class="use-roomtype"></div>
-                    <div class="use-hotel-date"></div>
-                    <div class="user-reviews"></div>
+            <div class="review-tap-con" id="review-target">
+                <div class="review-title">利用者レビュー (100件)</div>
+                <div class="search-review-type">
+                    <label>検索条件</label>
+                    <select name="" id="">
+                        <caption>検索</caption>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <select name="" id="">
+                        <caption>検索</caption>
+                        <option value="">全利用者</option>
+                        <option value="">出張</option>
+                        <option value="">家族</option>
+                        <option value="">カップル</option>
+                        <option value="">友達</option>
+                        <option value="">個人</option>
+                    </select>
+                    <label>順</label>
+                    <select name="" id="">
+                        <caption>検索</caption>
+                        <option value="">オススメ</option>
+                        <option value="">最新レビュー</option>
+                    </select>
                 </div>
             </div>
-            <div class="review-content-con">
-                <div class="review-score"></div>
-                <div class="review-centent-box">
-                    <div class="review-content"></div>
-                    <div class="review-date"></div>
+            <div class="review-list">
+                <div class="user-con">
+                    <div class="user-info">userName</div>
+                    <div class="user-info">シングルベッド</div>
+                    <div class="user-info">利用日:2021年 5月</div>
+                    <div class="user-info">家族</div>
+                    <div class="user-info">レビュー:5件</div>
                 </div>
-                <div class="likes"></div>
+                <div class="review-content-con">
+                    <div class="review-score">5/5 とても良い</div> <!--28 12 20 -->
+                    <div class="review-date">作成日:2021年 4月 25日</div>
+                    <div class="review-centent-box">
+                        <div class="review-content"><!--max-lenght = 726-->
+                            フォントはこれですこの日は素敵な夜でした。
+                        </div>
+                    </div>
+                    <div class="review-like-btn"><button>いいね (2)</button></div>
+                </div>
+            </div>
+            <div class="review-list">
+                <div class="user-con">
+                    <div class="user-info">userName</div>
+                    <div class="user-info">シングルベッド</div>
+                    <div class="user-info">利用日:2021年 5月</div>
+                    <div class="user-info">家族</div>
+                    <div class="user-info">レビュー:5件</div>
+                </div>
+                <div class="review-content-con">
+                    <div class="review-score">5/5 とても良い</div>
+                    <div class="review-date">作成日:2021年 4月 25日</div>
+                    <div class="review-centent-box">
+                        <div class="review-content"><!--max-lenght = 726-->
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                            フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。フォントはこれですこの日は素敵な夜でした。
+                        </div>
+                    </div>
+                    <div class="review-like-btn"><button>いいね (2)</button></div>
+                </div>
             </div>
         </div>
     </main>
