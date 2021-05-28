@@ -33,8 +33,8 @@
 </header>
     <main>
         <div class="payment-con">
-            <div class="payment-wp">
-                <div class="hotel-info-con">
+            <div class="hotel-info-con">
+                <div class="hotel-info-box">
                     <div class="hotel-title"><span>新宿ホテル</span><span class="review-score">★★★</span></div>
                     <div class="hotel-address"><span>7-10-5 西新宿 新宿区 東京都 160-0023</span></div>
                     <div class="checkin-time"><span>スーペリア　ツインルーム</span>&<span>チェックイン: 14:00以降</span></div>
@@ -47,25 +47,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="user-date-con">
-                    <div class="date-info">
-                        <div class="date-items"><span>チェックイン</span><input type="date" name="start-date" id="start-date" class="content-input-date" ></div>
-                        <div class="nights">1泊</div>
-                        <div class="date-items"><span>チェックアウト</span><input type="date" name="end-date" id="end-date" class="content-input-date"></div>
-                        <div class="date-items"><span>残りルーム</span><div class="room-count"></div></div>
-                    </div>
-                </div>
-                <div class="arrival-con">
-    
-                </div>
-                <div class="payment-btn-con">
-                    <!-- <div class="payment-btn">
-                        <span></span>
-                        <button></button>
-                    </div> -->
-                </div>
             </div>
-
             <div class="side-bar-con">
                 <div class="side-bar">
                     <div class="side-item">
@@ -74,6 +56,40 @@
                     </div>
 
                 </div>
+            </div>
+            <div class="user-date-con">
+                <div class="date-info">
+                    <div class="date-items"><span>チェックイン</span><input type="date" name="start-date" id="start-date" ></div>
+                    <div class="nights">1泊</div>
+                    <div class="date-items"><span>チェックアウト</span><input type="date" name="end-date" id="end-date"></div>
+                        <div class="date-items"><span>残りルーム</span><div class="room-count">3</div></div>
+                    </div>
+                    <div class="guest-info">
+                        <div class="guest-title"><h3>宿泊客氏名</h3></div>
+                        <div class="guest-remark">宿泊客の名前はチェックインの際に提示する身分証明書の名前と同じように入力してください。</div>
+                        <div class="guest-name-con">
+                            <label>姓<div class="frist-name"><input type="text"  placeholder="例:鈴木"></div></label>
+                            <div class="margin-name-con"></div>
+                            <label>名前<div class="last-name"><input type="text"  placeholder="例:太郎"></div></label>
+                        </div>
+                        <div class="guest-add-con"><label><button>+</button>宿泊客追加</label></div>
+                        <div class="guest-email-con">
+                            <label>メールアドレス<div class="guest-email"><input type="email" placeholder="メールアドレス"></div></label>
+                        </div>
+                        <div class="guest-tel-con">
+                            <label>電話番号<div class="guest-tel"><input type="text" placeholder="電話番号"></div></label>
+                        </div>
+                    </div>
+                    <div class="arrival-con">
+                        <h3>チェックイン時間</h3>
+                        <p>最速のチェックイン時間は15:00です。 以前到着した場合、待ち時間がかかる場合があります。</p>
+                    </div>
+                    <div class="payment-btn-con">
+                        <p class="agreement-content"><input type="checkbox"> 予約をご希望の際は、ご利用規約及び個人情報の取り扱い方針を読み、これに同意します。</p>
+                        <button class="do-pay-btn">決済する</button>
+                    </div>
+                </div>
+                <div class="before-page-btn"><a href="">＜ 戻る</a></div>
             </div>
         </div>
     </main>

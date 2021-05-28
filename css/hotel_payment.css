@@ -9,8 +9,8 @@
 
 /*content*/
 .payment-con{width: 1177px; height: 100%; margin: 0 150px; display: inline-block; position: relative; border: 1px solid blue;}
-.payment-wp{width: 700px; box-sizing: border-box; float: left;  margin: 15px; padding: 10px; background-color: white; word-break: break-all;}
-.hotel-info-con{width: 100%; height: 100%;  line-height: 30px; border-bottom:1px dotted gray; padding-bottom: 15px;}
+.hotel-info-con{width: 700px; box-sizing: border-box; float: left;  margin: 15px; padding: 10px; background-color: white; word-break: break-all;}
+.hotel-info-box{width: 100%; height: 100%;  line-height: 30px; border-bottom:1px dotted gray; padding-bottom: 15px;}
 .hotel-title{display: block; font-size: 28px;}
 .review-score{font-size: 16px; margin: 0;  }
 .hotel-address{font-size: 14px; display: block;}
@@ -20,11 +20,41 @@
 .room-info-link{float: right; background-color: white; border: none; cursor: pointer; font-weight: bold; color: slateblue;}
 .room-info-link:hover{text-decoration: underline;}
 
-.user-date-con{display: block; position: relative; background-color: white; margin-top: 20px;}
-.date-info{display: flex;}
-.date-items{}
-.nights{}
+.user-date-con{display: inline-block; position: relative;  line-height: 30px; height: 100%; width: 700px; margin: 0 12px 0 12px; border: 3px solid darkgray; transform: none; }
+.date-info{display: flex; background-color: white ; width: 670px; height: 60px; padding: 15px;  text-align: left; font-size: 14px; color: slategrey; border-bottom:1px dotted gray;}
+.nights{height: 30px; width: 30px; margin: 25px 60px 0 0; color: black;}
+.date-items{display: block; height: 30px; width: 200px;}
+.date-items>span{width: 100%; display: inline-block;}
+.date-items>input{width: 150px; text-align: left;}
+.date-items>input{border: none; border-bottom: 1px solid gray; color: black; font-size: 18px; font-weight: bold; text-decoration: none; outline:none;}
+.date-items>input:focus{border-bottom: 2px solid slateblue; }
+.room-count{text-align: left; color: red; font-size: 16px;font-weight: bold;}
 
+.guest-info{display: inline-block; line-height: 30px; width: 670px; background-color: white; padding: 0 15px;}
+.guest-title{display: block; position: relative; font-size: 20px;}
+.guest-remark{font-size: 14px; color: black;}
+.guest-name-con{display: flex; width: 100%; position: relative; height: 100%;}
+.margin-name-con{margin-right: 100px;}
+.frist-name>input:focus , .last-name>input:focus{outline: none; border: 0;  border-bottom: 2px solid slateblue; margin-bottom: 2px;}
+.frist-name>input , .last-name>input{display: block; outline: none; border: 0; margin-bottom: 15px; block-size: 40px; font-size: 16px; border-bottom: 1px solid gray; width: 280px;}
+.guest-add-con{margin-bottom: 15px; width: 150px;}
+.guest-add-con>label{cursor: pointer; font-weight: bold; font-size: 14px; line-height: 21px;}
+.guest-add-con>label>button{background-color: slateblue; border: none; color: white; font-size: 14px; border-radius: 25px; margin-right: 10px; cursor: pointer;}
+.guest-email-con , .guest-tel-con{width: ; display: flex;  height: 80px;}
+.guest-email>input , .guest-tel>input{ border: 0; border-bottom: 1px solid gray; margin-bottom: 15px; block-size: 40px; width: 280px; font-size: 16px;}
+.guest-email>input:focus , .guest-tel>input:focus{border-bottom: 2px solid slateblue; outline: none; }
+
+.arrival-con{background-color: white; padding: 0 15px; width: 670px; display: block;}
+.arrival-con>h3{font-size: 22px; text-align: left;}
+.arrival-con>p{font-size: 14px;}
+
+.payment-btn-con{background-color: white; padding: 1px 15px 15px 15px; width: 670px; display: block;}
+.agreement-content{font-size: 14px; text-align: left;}
+.do-pay-btn{width: 100%; background-color: orange; color: white; border: none; height: 50px; font-size: 24px; font-weight: bold; text-align: center;}
 /*side-bar*/
-.side-bar-con{width: 432px; height: 100px; margin: 15px 15px 15px 0; float: right; position: relative;  display: block; background-color: yellow;}
-.side-bar{width: 400px; height: ; padding: 10px; display: block; position: fixed; box-sizing: border-box; background-color: ;}
+.side-bar-con{width: 432px; height: 1000px; float: right; margin: 15px 15px 15px 0; position: relative;  display: block; background-color: yellow;}
+.side-bar{width: 431px; height: 300px; padding: 10px; display: block; position: fixed; box-sizing: border-box; background-color: pink;}
+
+.before-page-btn{padding: 0 15px; margin: 15px 0;}
+.before-page-btn>a{text-decoration: none; color: black; font-size: 16px; line-height: 40px;}
+.before-page-btn>a:hover{color: slateblue;}
