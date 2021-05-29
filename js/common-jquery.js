@@ -5,7 +5,13 @@ $(window).scroll(function () {
       $('.top-btn-con').fadeOut('fast');
     }
   });
-  $('.top-btn-con').click(function (e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop: 0}, 200);
-  });
+
+$('.top-btn-con').click(function (e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop: 0}, 200);
+});
+
+$('#modal-con').click(function(e){
+  if( !$('#modal-con').has(e.target).length ) $('#modal-con').hide();
+});
+

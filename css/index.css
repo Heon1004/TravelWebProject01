@@ -28,7 +28,7 @@
 .search-box{display: block; height: 100%;width: 100%;}
 .search-item-hotel{padding: 0 15px 15px 15px;text-align: left;font-size: 18px;display: inline-flex;width: 25.2%;height: 80px;box-sizing:border-box;margin: 0 -3px;}
 .content-input , .content-input-date{display: inline-flex;;margin-top:  5;float: right;position: relative;width: 100%;height: 60%;border: 1px solid darkgray; }
-.content-input:focus , .content-input-date:focus{ outline:none; border-bottom: 3px solid slateblue; padding-bottom: 2px;}
+.content-input:focus , .content-input-date:focus{ outline:none; border-bottom: 3px solid rgb(172, 71, 255); padding-bottom: 2px;}
 .content-input-date{text-align: center; font-size: 18px;}
 .search-item-airplane-2 > .content-input , .search-item-airplane > .content-input {width: 50%; margin-top: 20px;}
 .search-item-airplane-2 > span{color: black; text-align: left;}
@@ -45,18 +45,18 @@
 .search-item-airplane > .content-input-date{margin-top: 20px;}
 .search-item-rentcar>label>input{width: 100%; height: 100%;}
 .search-submit{ float: right; position: relative;  text-align: center; text-decoration: none; font-size: 16px; width: 60px; margin: 3px 5px 0 10px; border-radius: 8px; background-color: #fff; color: black; border: 1px solid darkgray; transition-duration: 0.4s; cursor: pointer;}
-.search-submit:hover {background-color: slateblue;color: black;}
+.search-submit:hover {background-color: slateblue;color: white;}
 label, .search-item-airplane-2 > p{color: black; font-size: 16px;}
 label{text-align: left; width: auto;}
 .search-item-hotel >.guest{position: relative; width: 35%; height: 25px; margin: 0 10px 0 10px; text-align: center;}
 .room-input{width: 40px; margin-top: 10px; text-align: center; border: 1px solid darkgray;}
-.room-input:focus{border-bottom: 3px solid slateblue;  outline:none;}
+.room-input:focus{border-bottom: 3px solid rgb(172, 71, 255);  outline:none;}
 
 .review-con{ box-sizing: border-box; display: inline-block; width: 100%; position: relative; height: 34px;}
 .review-box{ padding: 2px 0 0 0; margin: 0px 15px 0px 15px; position: relative; display: inline-flex;}
 .review-title{margin: 0 0 0 0; padding: 0 20px; display: inline-block; }
 .review-item, .rental-notice{ display: inline-block; position: relative; margin: 0 0 0 5px; padding-right: 10px; text-align: center; height: 28px;}
-.review-item:hover{ background-color: slateblue; border-radius: 8px;}
+.review-item:hover{ background-color: slateblue; border-radius: 8px; color: white;}
 .review-item.active{background-color: slateblue; border-radius: 8px;}
 .review-item > label:hover , .review-item.active > label{color: white;}
 .review-item >label{color: black; cursor: pointer;}

@@ -8,9 +8,9 @@
 .mark-item-null{color: gray;}
 
 /*content*/
-.payment-con{width: 1177px; height: 100%; margin: 0 150px; display: inline-block; position: relative; border: 1px solid blue;}
+.payment-con{width: 1177px; height: 100%; margin: 0 150px; display: inline-block; position: relative;}
 .hotel-info-con{width: 700px; box-sizing: border-box; float: left;  margin: 15px; padding: 10px; background-color: white; word-break: break-all;}
-.hotel-info-box{width: 100%; height: 100%;  line-height: 30px; border-bottom:1px dotted gray; padding-bottom: 15px;}
+.hotel-info-box{width: 100%; height: 100%;  line-height: 30px; padding-bottom: 15px;}
 .hotel-title{display: block; font-size: 28px;}
 .review-score{font-size: 16px; margin: 0;  }
 .hotel-address{font-size: 14px; display: block;}
@@ -44,17 +44,27 @@
 .guest-email>input , .guest-tel>input{ border: 0; border-bottom: 1px solid gray; margin-bottom: 15px; block-size: 40px; width: 280px; font-size: 16px;}
 .guest-email>input:focus , .guest-tel>input:focus{border-bottom: 2px solid slateblue; outline: none; }
 
-.arrival-con{background-color: white; padding: 0 15px; width: 670px; display: block;}
-.arrival-con>h3{font-size: 22px; text-align: left;}
-.arrival-con>p{font-size: 14px;}
+.arrival-con{background-color: white; padding: 15px; width: 670px; display: block; margin-top: 10px;}
+.arrival-con>h3{font-size: 22px; text-align: left; margin: 0;}
+.arrival-con>p{font-size: 14px; margin: 0;}
 
-.payment-btn-con{background-color: white; padding: 1px 15px 15px 15px; width: 670px; display: block;}
-.agreement-content{font-size: 14px; text-align: left;}
-.do-pay-btn{width: 100%; background-color: orange; color: white; border: none; height: 50px; font-size: 24px; font-weight: bold; text-align: center;}
+.payment-btn-con{background-color: white; padding: 15px; width: 670px; display: block; margin-top: 10px;}
+.agreement-content{font-size: 14px; text-align: left; margin: 0;}
+.do-pay-btn{width: 100%; background-color: orange; color: white; border: none; height: 50px; font-size: 24px; font-weight: bold; text-align: center; cursor: pointer;}
 /*side-bar*/
-.side-bar-con{width: 432px; height: 1000px; float: right; margin: 15px 15px 15px 0; position: relative;  display: block; background-color: yellow;}
-.side-bar{width: 431px; height: 300px; padding: 10px; display: block; position: fixed; box-sizing: border-box; background-color: pink;}
+.side-bar-con{width: 432px; float: right; margin: 15px 15px 15px 0; position: relative;  display: block; }
+.side-bar{width: 431px; padding: 10px 24px 24px 24px; position: relative; display: block; box-sizing: border-box; background-color: white; z-index: 999;}
+.side-item-box{width: 100%; height: 100px; border-bottom: 1px dotted gray; line-height: 30px;}
+.side-item{display: block; width: 100%; font-size: 24px; text-align: left;}
+.side-item-price{width: 200px; text-align: right; display: block; font-size: 24px; float: right; font-weight: bold; color: slateblue;}
+.side-item2{width: 100%; text-align: left; display: block; margin: 5px 0; font-size: 14px; }
+.side-item3{width: 100%; text-align: right; display: block; margin: 5px 0; font-size: 14px; color: black;}
+.pay-point{width: 100%; display: block; margin-top: 10px; line-height: 30px;}
+.point-title{text-align: left; font-size: 22px; margin-bottom: 5px; display: block; }
+.point-item{display: block; font-size: 14px; }
+.point-item>span{display: block; float: right; }
 
+/*bottom back.history a link*/
 .before-page-btn{padding: 0 15px; margin: 15px 0;}
 .before-page-btn>a{text-decoration: none; color: black; font-size: 16px; line-height: 40px;}
 .before-page-btn>a:hover{color: slateblue;}

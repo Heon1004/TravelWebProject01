@@ -20,9 +20,36 @@
             <div class="ordersearch-btn"><a href="">予約照会・変更・キャンセル</a></div>
             <div class="notice-btn"><a href="">お知らせ</a></div>
             <div class="account-con">
-                <span class="login-btn" ><a href="./Member/login.html" class="account-button">ログイン</a></span>
-                <span class="register-btn"><a href="./Member/join.html" class="account-button">会員登録</a></span>
+                <span><button class="account-btn" onclick="openloginModal()">ログイン</button></span>
+                <span><a href="./Member/register.html" class="account-btn" >会員登録</a></span>
             </div>
+        </div>
+    </div>
+    <div class="modal-con" id="modal-con">
+        <div class="login-modal" id="login-modal">
+            <form action="">
+                <button class="close-btn" onclick="closeloginModal()">X</button>
+                <h2>ログイン</h2>
+                <div class="login-id">
+                    <h4>E-mail</h4>
+                    <input type="email" name="" placeholder="Email">
+                </div>
+                <div class="login-pw">
+                    <h4>Password</h4>
+                    <input type="password" name=""placeholder="Password">
+                </div>
+                <div class="login-etc">
+                    <div class="forgot-pw">
+                    <button id="forgot-pw" onclick="openfindModal()">ID又はPasswordを忘れた場合</button>
+                    </div>
+                    <div class="register-link">
+                        <a href="">会員登録</a>
+                    </div>
+                </div>
+                <div class="login-submit">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
         </div>
     </div>
     <div class="nav-con">
@@ -235,5 +262,6 @@
 <script src="./js/common-jquery.js"></script>
 <!--このようにするのかわからない。。。-->
 <script type="text/javascript" src="./js/index.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./js/common.js" charset="UTF-8"></script>
 </body>
 </html>
