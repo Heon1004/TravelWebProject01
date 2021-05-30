@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <title>旅行はどこ?ここ!　ホテル・航空券・レンタカー</title>
+</head>
+<body>
+<header>
+    <div class="hd-menu">
+        <div class="logo-con">
+            <span><a href="./index.html" class="logo-con-link">旅行はここ</a></span>
+        </div>
+        <div class="func_con">
+            <div class="ordersearch-btn"><a href="">予約照会・変更・キャンセル</a></div>
+        </div>
+    </div>
+    <div class="nav-con">
+        <ul><!--後でNav押したらActive状態にさせ、bg-colorが適用されるように-->
+            <li class="nav-item" id="nav-hotel"><a href="./Hotel/hotel_list.html"  id="hotel-nav"  class="nav-link">ホテル</a></li>
+            <li class="nav-item"><a href=""  class="nav-link"></a></li>
+            <li class="nav-item"><a href=""  class="nav-link">レンタカー</a></li>
+            <li class="nav-item"><a href="" >ツアー</a></li>
+            <li class="nav-item"><a href="" >イベント</a></li>
+            <li class="nav-item"><a href="" >初めての方へ</a></li>
+            <li class="nav-item"><a href="" > クチコミ</a></li>
+        </ul>
+    </div>
+</header>
+    <main>
+        
+    </main>
+<footer>
+   <p>&copy; This is Travel Site</p>
+</footer>
+<div class="top-btn-con">
+    <button type="button" class="go-top" onclick="goTop()" >↑</button>
+</div>
+<!--Jquery CDN JqueryがJSより上にする-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./js/common-jquery.js"></script>
+<!--このようにするのかわからない。。。-->
+<script type="text/javascript" src="./js/index.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./js/common.js" charset="UTF-8"></script>
+</body>
+</html>

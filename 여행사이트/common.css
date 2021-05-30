@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body{box-sizing: border-box; position: relative; height: 100%; width: 100%; margin: 0; padding: 0; font-family: 'Sawarabi Gothic', sans-serif;}
+body{box-sizing: border-boxposition: relative; height: 100%; width: 100%; margin: 0; padding: 0; font-family: 'Sawarabi Gothic', sans-serif;}
 main{ display: block; height: 100%; width: 100%; background-color: whitesmoke; position: relative; padding: 0 0 0 0; margin: 0;}
 header {margin:0 150px;box-sizing: border-box; height: 100%; padding: 0;}
 a, div.notice-title, div.notice-item{text-decoration:none;}
@@ -20,42 +20,36 @@ a, div.notice-title, div.notice-item{text-decoration:none;}
 .close-btn{float: right; background-color: white; border: none; cursor: pointer;}
 .login-modal>form>h2 { color: rgb(172, 71, 255);font-size: 2em; text-align: center; background-color: white; border: none;}
 .forgot-pw>button{border: none; background-color: white; color: gray; display: block; text-align: center; cursor: pointer;  }
-.forgot-pw>button:hover, .register-link>button:hover{color: slateblue;}
-.login-email {margin-top: 20px;width: 80%;}
-.login-modal>form>div>h4{margin: 10px; width: 60%;}
-.login-email input {width: 100%;height: 50px;border-radius: 30px;margin-top: 10px;padding: 0px 20px;border: 1px solid lightgray;outline: none;}
+.login-etc{width: 100%;}
+.forgot-pw>button:hover, .register-link>a:hover{color: slateblue;}
+.login-id {margin-top: 20px;width: 80%;}
+.login-id>h4 , .login-pw>h4{margin: 10px;}
+.login-id input {width: 100%;height: 50px;border-radius: 30px;margin-top: 10px;padding: 0px 20px;border: 1px solid lightgray;outline: none;}
 .login-pw {margin-top: 20px;width: 80%;}
 .login-pw input {width: 100%;height: 50px;border-radius: 30px;margin-top: 10px;padding: 0px 20px;border: 1px solid lightgray;outline: none;}
-.login-etc{padding: 0; width: 90%;font-size: 14px;display: flex;justify-content: space-between;align-items: center;font-weight: bold;}
-.register-link{margin-top: 10px; float: right;}
-.register-link>button{color: gray; border: none; background-color: white; display: block; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; }
+.login-etc{padding: 10px;width: 80%;font-size: 14px;display: flex;justify-content: space-between;align-items: center;font-weight: bold;}
+.register-link>button{color: gray; border: none; background-color: white; display: block; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: 100; }
 .login-submit {margin-top:30px;width: 100%;}
 .login-submit input {width: 100%;height: 50px;border: 0;outline: none; font-size: 24px; border-radius: 40px;background: linear-gradient(to left, rgb(255, 77, 46), slateblue);color: white;letter-spacing: 2px; cursor: pointer;}
 
-/*register-Modal*/
-.register-modal-con{ display: none;position: fixed; z-index: 10;left: 0; top: 0; height: 100%; width: 100%; overflow: auto; background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4); }
-.register-modal{background-color: #fefefe; margin: 0px auto; margin-top: 16px; padding: 20px;border: 1px solid #888; width: 400px; border-radius: 30px; text-align: left;}
+/*Login-Modal*/ /* rgb(172, 71, 255) purpleみたいな綺麗な色 */
+.register-modal-con{ display: none;position: fixed; z-index: 10;left: 0;top: 0; height: 100%; width: 100%; overflow: auto; background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4); }
+.register-modal{background-color: #fefefe; margin: 90px auto; padding: 20px;border: 1px solid #888;width: 400px; height: 430px; border-radius: 30px; text-align: left;}
 .close-btn{float: right; background-color: white; border: none; cursor: pointer;}
 .register-modal>form>h2 { color: rgb(172, 71, 255);font-size: 2em; text-align: center; background-color: white; border: none;}
-.register-item {margin-top: 20px;width: 80%;}
-.register-item input {width: 100%;height: 50px;border-radius: 30px;margin-top: 10px;padding: 0px 20px;border: 1px solid lightgray;outline: none;}
-.register-item>h4{margin: 10px;}
-.forgot-pw{font-size: 12px; margin: 10px 10px 0 10px; color: gray;}
-.forgot-pw>button{background-color: white; border: none; cursor: pointer; color: gray; font-weight: bold; font-size: 14px; margin: 0; padding: 0;}
-.forgot-pw>button:hover{color: slateblue;}
+.forgot-pw>button{border: none; background-color: white; color: gray; display: block; text-align: center; cursor: pointer;  }
+.register-etc{width: 100%;}
+.forgot-pw>button:hover, .register-link>a:hover{color: slateblue;}
+.register-id {margin-top: 20px;width: 80%;}
+.register-id>h4 , .register-pw>h4{margin: 10px;}
+.register-id input {width: 100%;height: 50px;border-radius: 30px;margin-top: 10px;padding: 0px 20px;border: 1px solid lightgray;outline: none;}
+.register-pw {margin-top: 20px;width: 80%;}
+.register-pw input {width: 100%;height: 50px;border-radius: 30px;margin-top: 10px;padding: 0px 20px;border: 1px solid lightgray;outline: none;}
+.register-etc{padding: 10px;width: 80%;font-size: 14px;display: flex;justify-content: space-between;align-items: center;font-weight: bold;}
+.register-link>a{color: gray; border: none; display: block; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: 100; }
 .register-submit {margin-top:30px;width: 100%;}
 .register-submit input {width: 100%;height: 50px;border: 0;outline: none; font-size: 24px; border-radius: 40px;background: linear-gradient(to left, rgb(255, 77, 46), slateblue);color: white;letter-spacing: 2px; cursor: pointer;}
 
-/*forgot-Modal*/
-.forgot-modal-con{ display: none;position: fixed; z-index: 10;left: 0;top: 0; height: 100%; width: 100%; overflow: auto; background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4); }
-.forgot-modal{background-color: #fefefe; margin: 90px auto; padding: 20px;border: 1px solid #888;width: 400px; border-radius: 30px; text-align: left;}
-.close-btn{float: right; background-color: white; border: none; cursor: pointer;}
-.forgot-modal>form>h2 { color: rgb(172, 71, 255);font-size: 2em; text-align: center; background-color: white; border: none;}
-.forgot-item {margin-top: 20px;width: 80%;}
-.forgot-item input {width: 100%;height: 50px;border-radius: 30px;margin-top: 10px;padding: 0px 20px;border: 1px solid lightgray;outline: none;}
-.forgot-item>h4{margin: 10px;}
-.forgot-submit {margin-top:30px;width: 100%;}
-.forgot-submit input {width: 100%;height: 50px;border: 0;outline: none; font-size: 24px; border-radius: 40px;background: linear-gradient(to left, rgb(255, 77, 46), slateblue);color: white;letter-spacing: 2px; cursor: pointer;}
 
 /*NAV*/
 .nav-con{ width: 100%; height: 100%; position: relative;display: inline-flex; margin: 0; padding: 0;}

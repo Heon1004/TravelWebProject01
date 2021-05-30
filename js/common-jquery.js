@@ -11,7 +11,23 @@ $('.top-btn-con').click(function (e) {
   $('html, body').animate({scrollTop: 0}, 200);
 });
 
-$('#modal-con').click(function(e){
-  if( !$('#modal-con').has(e.target).length ) $('#modal-con').hide();
+$('#login-modal-con').click(function(e){
+  if( !$('#login-modal-con').has(e.target).length ) {
+    $('#login-modal-con').css("display","none");
+    $('#login-modal-con').hide();
+  }
 });
 
+$('#register-modal-con').click(function(e){
+  if( !$('#register-modal-con').has(e.target).length ) {
+    $('#register-modal-con').css("display","none");
+    $('#register-modal-con').hide();
+  }
+});
+
+$('#forgot-modal-con').click(function(e){
+  if( !$('#forgot-modal-con').has(e.target).length ) {
+    $('#forgot-modal-con').css("display","none");
+    $('#forgot-modal-con').hide();
+  }
+});
