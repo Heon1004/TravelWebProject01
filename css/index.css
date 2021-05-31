@@ -53,13 +53,13 @@ label{text-align: left; width: auto;}
 .room-input:focus{border-bottom: 3px solid rgb(172, 71, 255);  outline:none;}
 
 .review-con{ box-sizing: border-box; display: inline-block; width: 100%; position: relative; height: 34px;}
-.review-box{ padding: 2px 0 0 0; margin: 0px 15px 0px 15px; position: relative; display: inline-flex;}
+.review-box{ padding: 2px 0 0 0; margin: 0px 15px 0px 15px; position: relative; display: inline-flex; }
 .review-title{margin: 0 0 0 0; padding: 0 20px; display: inline-block; }
 .review-item, .rental-notice{ display: inline-block; position: relative; margin: 0 0 0 5px; padding-right: 10px; text-align: center; height: 28px;}
 .review-item:hover{ background-color: slateblue; border-radius: 8px; color: white;}
 .review-item.active{background-color: slateblue; border-radius: 8px;}
 .review-item > label:hover , .review-item.active > label{color: white;}
-.review-item >label{color: black; cursor: pointer;}
+.review-item >label{ cursor: pointer;}
 
 .home-wrapper{width: 100%; margin: 0; position: relative; display: inline-block;}
 .recommend-con{margin: 0 150px;}

@@ -57,11 +57,9 @@
                 <form action="">
                     <button type="button" class="close-btn"  onclick="closeregisterModal()">X</button>
                     <h2>アカウントを作成</h2>
-                    <div class="register-item-name">
+                    <div class="register-item">
                         <h4>氏名</h4>
-                        <input type="text" name="" placeholder="鈴木太郎">
-                        <h4>ひらがな</h4>
-                        <input type="text" name="" placeholder="すずきももたろ">
+                        <input type="text" name="" placeholder="Email">
                     </div>
                     <div class="register-item">
                         <h4>メールアドレス</h4>
@@ -75,7 +73,7 @@
                         <h4>確認パスワード</h4>
                         <input type="password" name="" placeholder="Re-enter-Password">
                     </div>
-                    <div class="login-item">
+                    <div class="forgot-pw">
                         <button type="button" id="login-link">既にアカウントがある方ログイン</button>
                     </div>
                     <div class="register-submit">
@@ -119,7 +117,7 @@
                         <a href="" class="main-item active"><span>全て</span></a>
                         <a href=""><span>決済待ち</span></a>
                         <a href=""><span>新規予約</span></a>
-                        <a href=""><span>レビュー済み</span></a>
+                        <a href=""><span>レビュー作成</span></a>
                     </div>
                     <div class="search-bar">
                         <form action="">
@@ -162,7 +160,7 @@
                                 <div class="content-title-item">予約番号 : 321543534</div>
                                 <div class="content-title-item">KIM-sodsaoda-doadoas</div>
                                 <div class="content-title-item">2022-09-12</div>
-                                <div class="content-title-item" id="content-submit"><button type="button" onclick="openreviewModal()">レビュー作成</button></div>
+                                <div class="content-title-item" id="content-submit"><button type="submit">予約キャンセル</button></div>
                             </div>
                             <div class="content-main">
                                 <div class="hotel-title"><a href="" target="_blank" title="ホテル情報を見る">新宿ホテル</a></div>
@@ -240,24 +238,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <div class="review-modal-con" id="review-modal-con">
-            <div class="review-modal">
-                <form action="">
-                    <button type="button" class="close-btn" onclick="closereviewModal()">X</button>
-                    <div class="review-title"><span>新宿ホテル</span></div>
-                    <div class="review-content"><textarea placeholder="レビュー内容" maxlength="2048"></textarea></div>
-                    <div class="review-score-box">
-                        <div class="review-item"><label><input type="radio" name="review-item" value="2" >★2</label></div>
-                        <div class="review-item" ><label><input type="radio" name="review-item" value="3" >★3</label></div>
-                        <div class="review-item"><label><input type="radio" name="review-item" value="4" >★4</label></div>
-                        <div class="review-item" ><label><input type="radio" name="review-item" value="5" >★5</label></div>
-                    </div>
-                    <div class="write-review-btn">
-                        <input type="submit" value="レビュー作成"></button>
-                    </div>
-                </form>
             </div>
         </div>
     </main>
