@@ -99,7 +99,7 @@
             </div>
         <div class="nav-con">
             <ul><!--後でNav押したらActive状態にさせ、bg-colorが適用されるように-->
-                <li class="nav-item" id="nav-hotel"><a href="./Hotel/hotel_list.html"  id="hotel-nav"  class="nav-link">ホテル</a></li>
+                <li class="nav-item" id="nav-hotel"><a href="../Hotel/hotel_list.html"  id="hotel-nav"  class="nav-link">ホテル</a></li>
                 <li class="nav-item"><a href=""  id="air-nav" class="nav-link">航空券</a></li>
                 <li class="nav-item"><a href=""  id="rent-nav" class="nav-link">レンタカー</a></li>
                 <li class="nav-item"><a href="" >ツアー</a></li>
@@ -119,9 +119,21 @@
                             <div class="search-item-hotel"><label>チェックイン<input type="date" name="start-date" id="start-date" class="content-input" ></label></div>
                             <div class="search-item-hotel"><label>チェックアウト<input type="date" name="end-date" id="end-date" class="content-input"></label> </div>
                             <div class="search-item-hotel">
-                                <label class="guest">部屋<input type="text" name="room" value="1" class="room-input"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></label>
-                                <label class="guest">大人<input type="text" name="adult" value="2" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
-                                <label class="guest">子供<input type="text" name="child" value="0" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
+                                <span class="guest">部屋
+                                    <input type="text" name="room" id="guest-room" value="1" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                    <button type="button" id="removeRoom" onclick="guestCount(this.id)">-</button>
+                                    <button type="button" id="addRoom" onclick="guestCount(this.id)">+</button>
+                                </span>
+                                <span class="guest">大人
+                                    <input type="text" name="adult" id="guest-adult" value="2" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                                    <button type="button" id="removeAdult" onclick="guestCount(this.id)">-</button>
+                                    <button type="button" id="addAdult" onclick="guestCount(this.id)">+</button>
+                                </span>
+                                <span class="guest">子供
+                                    <input type="text" name="child" id="guest-child" value="0" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                                    <button type="button" id="removeChild" onclick="guestCount(this.id)">-</button>
+                                    <button type="button" id="addChild" onclick="guestCount(this.id)">+</button>
+                                </span>
                                 <button type="submit" class="search-submit" value="airplane">検索</button>
                             </div>
                         </div>
@@ -307,7 +319,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../js/common-jquery.js"></script>
 <!--このようにするのかわからない。。。-->
-<script type="text/javascript" src="../js/hotel_list.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/hotel_list_info.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../js/common.js" charset="UTF-8"></script>
 </body>
 </html>

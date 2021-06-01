@@ -15,6 +15,9 @@ label{text-align: left; width: auto;}
 .search-item-hotel >.guest{position: relative; width: 35%; height: 25px; margin: 0 10px 0 10px; text-align: center;}
 .room-input{width: 40px; margin-top: 10px; text-align: center; border: 1px solid darkgray;}
 .room-input:focus{border-bottom: 3px solid rgb(172, 71, 255);  outline:none;}
+.search-item-hotel>.guest{font-size: 16px; color: white; font-weight: 400;}
+.guest>button{background-color: white;  border: 1px solid gainsboro; cursor: pointer; font-weight: bold; text-align: center; padding: 0; width: 20px; font-size: 14px;}
+.guest>button:hover{color: slateblue;}
 /*width 1177px margin side 150px 基本*/
 
 /*content-contain*/

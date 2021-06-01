@@ -49,8 +49,10 @@
 label, .search-item-airplane-2 > p{color: black; font-size: 16px;}
 label{text-align: left; width: auto;}
 .search-item-hotel >.guest{position: relative; width: 35%; height: 25px; margin: 0 10px 0 10px; text-align: center;}
-.room-input{width: 40px; margin-top: 10px; text-align: center; border: 1px solid darkgray;}
+.room-input{width: 40px;  margin-top: 10px; text-align: center; border: 1px solid darkgray;}
 .room-input:focus{border-bottom: 3px solid rgb(172, 71, 255);  outline:none;}
+.guest>button{background-color: white; border: 1px solid gainsboro; cursor: pointer; font-weight: bold; width: 20px; font-size: 14px;}
+.guest>button:hover{color: slateblue;}
 
 .review-con{ box-sizing: border-box; display: inline-block; width: 100%; position: relative; height: 34px;}
 .review-box{ padding: 2px 0 0 0; margin: 0px 15px 0px 15px; position: relative; display: inline-flex; }

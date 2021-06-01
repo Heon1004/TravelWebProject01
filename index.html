@@ -56,7 +56,7 @@
             <div class="register-modal">
                 <form action="">
                     <button type="button" class="close-btn"  onclick="closeregisterModal()">X</button>
-                    <h2>アカウントを作成</h2>
+                    <h2>アカウント作成</h2>
                     <div class="register-item">
                         <h4>氏名</h4>
                         <input type="text" name="" placeholder="鈴木太郎">
@@ -105,7 +105,7 @@
             <li class="nav-item"><a href="" >ツアー</a></li>
             <li class="nav-item"><a href="" >イベント</a></li>
             <li class="nav-item"><a href="" >初めての方へ</a></li>
-            <li class="nav-item"><a href="" > クチコミ</a></li>
+            <li class="nav-item"><a href="./admin/admin.html" > ホテル管理</a></li>
         </ul>
     </div>
 </header>
@@ -137,9 +137,21 @@
                             <div class="search-item-hotel"><label>チェックイン<input type="date" name="start-date" id="start-date" class="content-input-date" ></label></div>
                             <div class="search-item-hotel"><label>チェックアウト<input type="date" name="end-date" id="end-date" class="content-input-date"></label> </div>
                             <div class="search-item-hotel">
-                                <label class="guest">部屋<input type="text" name="room" value="1" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></label>
-                                <label class="guest">大人<input type="text" name="adult" value="2" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
-                                <label class="guest">子供<input type="text" name="child" value="0" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></label>
+                                <span class="guest">部屋
+                                    <input type="text" name="room" id="guest-room" value="1" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                    <button type="button" id="removeRoom" onclick="guestCount(this.id)">-</button>
+                                    <button type="button" id="addRoom" onclick="guestCount(this.id)">+</button>
+                                </span>
+                                <span class="guest">大人
+                                    <input type="text" name="adult" id="guest-adult" value="2" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                                    <button type="button" id="removeAdult" onclick="guestCount(this.id)">-</button>
+                                    <button type="button" id="addAdult" onclick="guestCount(this.id)">+</button>
+                                </span>
+                                <span class="guest">子供
+                                    <input type="text" name="child" id="guest-child" value="0" class="room-input" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                                    <button type="button" id="removeChild" onclick="guestCount(this.id)">-</button>
+                                    <button type="button" id="addChild" onclick="guestCount(this.id)">+</button>
+                                </span>
                             </div>
                             <div class="review-con">
                                 <button type="submit" class="search-submit" value="airplane">検索</button>
