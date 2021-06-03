@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body{box-sizing: border-box; position: relative; height: 100%; width: 100%; margin: 0; padding: 0; font-family: 'Sawarabi Gothic', sans-serif;}
+body{box-sizing: border-box; position: relative; height: 100%; width: 100%; margin: 0; padding: 0;  font-family: 'Sawarabi Gothic', sans-serif;}
 main{ display: block; height: 100%; width: 100%; background-color: whitesmoke; position: relative; padding: 0 0 0 0; margin: 0;}
 header {margin:0 150px;box-sizing: border-box; height: 100%; padding: 0;}
 a, div.notice-title, div.notice-item{text-decoration:none;}
@@ -13,6 +13,16 @@ a, div.notice-title, div.notice-item{text-decoration:none;}
 .account-con>span{color: black; position: relative;text-align: center;padding: 0px;margin: 0; }
 .account-btn {color: black;background-color: white; font-size: 15px; width: 70px; padding: 0; margin: 0; height: 28px; border: none; outline: none; cursor: pointer;}
 .account-btn:hover {color: slateblue;}
+
+/*Drop down Menu*/
+.myaccount-con{position: relative; display: block; float: right; margin-top: 10px; box-sizing: border-box;}
+.account-drop{margin: 0; padding: 0; display: block; position: relative; border: 0; outline: none;}
+.drop-item{margin: 0; padding: 0; display: block; text-align: left; font-weight: 100;}
+.drop-item>button {background-color: white; border: none; font-size: 16px; font-weight: bold; outline: none; text-align: left; cursor: pointer;}
+.drop-item>button:hover{color: slateblue;}
+.dropmenu{margin: 0; padding: 0; display: none; position: absolute; z-index: 10; text-align: center; font-weight: 100; text-decoration: none; list-style: none;}
+.dropmenu>li>a{ color: gray; line-height: 10px;font-size: 14px; } 
+.dropmenu>li>a:hover{color: slateblue; font-weight: bold; }
 
 /*Login-Modal*/ /* rgb(172, 71, 255) purpleみたいな綺麗な色 */
 .login-modal-con{ display: none;position: fixed; z-index: 10;left: 0;top: 0; height: 100%; width: 100%; overflow: auto; background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4); }

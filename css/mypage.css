@@ -5,9 +5,8 @@
 .side-bar-con{width: 250px; display: block; position: relative; float: left; background-color: white; padding: 15px 0;}
 .side-nav{margin: 0; padding: 0;}
 .side-item{text-decoration: none; font-weight: bold; list-style: none; display: block;}
-.side-item, .side-item {list-style: none; margin: 0; padding: 0; }
-.side-item>button , .side-item-2>button{background-color: white; padding-left: 30px; border: none; font-size: 16px; font-weight: bold; text-align: left; cursor: pointer;}
-.side-item>button:hover , .side-item-2>button:hover{color: slateblue;}
+.side-item>button {background-color: white; padding-left: 30px; border: none; font-size: 16px; font-weight: bold; text-align: left; cursor: pointer;}
+.side-item>button:hover {color: slateblue;}
 .submenu>li{height: 35px;} 
 .submenu{margin: 0; padding: 0; text-align: left; font-weight: 100; text-decoration: none; list-style: none;}
 .submenu>li>a{ color: gray; line-height: 30px;font-size: 14px; padding-left: 40px; font-weight: bold;} 
@@ -48,14 +47,14 @@
 .hotel-checkin-time{font-size: 14px; }
 .booking-price{text-align: center;  width: 100px; display: flex; float: right; font-size: 18px; color: slateblue; font-weight: bold;}
 
-/*PAGE-btn*/
+/*Page-btn*/
 .page-btn-con{position: relative; display: block; text-align: center;  margin-top: 20px; line-height: 30px; box-sizing: border-box;}
 .page-btn{font-weight: bold; display: block;}
-.page{ margin: 0 10px; display: inline-block; padding-bottom: 8px; padding-left: 2px; border-radius: 8px; width: 20px; height: 20px; font-size: 12px;text-transform: uppercase;letter-spacing: 2.5px;color: #fff;background-color: slateblue;box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);transition: all 0.3s ease 0s;}
-.page:hover{background-color: #2EE59D;box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4);color: #fff;transform: translateY(0px);}
+.page{ margin: 0 10px; display: inline-block; padding-bottom: 8px; padding-left: 2px; border-radius: 4px; width: 20px; height: 20px; font-size: 12px;text-transform: uppercase;letter-spacing: 2.5px;color: gray;background-color: gainsboro;transition: all 0.3s ease 0s;}
+.page:hover{background-color: #2EE59D;color: #fff;transform: translateY(0px);}
 .page.active{color: white; background-color: #2EE59D;}
-#before-btn, #after-btn {color: black; font-size: 16px;}
-#before-btn:hover, #after-btn:hover {color: slateblue; }
+#before-btn, #after-btn {color: black; font-size: 16px; }
+#before-btn:hover, #after-btn:hover {color: slateblue; font-weight: bold; }
 
 
 /*Review*/
@@ -64,11 +63,12 @@
 .review-title{ color: rgb(172, 71, 255);font-size: 24px; text-align: center; margin-bottom: 20px; background-color: white; border: none;}
 .review-score-box{margin-top: 10px;}
 .review-content>textarea{height: 350px; width: 100%; outline: none; border: 1px solid gray;}
-.review-score-box{ padding: 2px 0 0 0; box-sizing: border-box; display: inline-block; width: 100%; position: relative; height: 34px;}
+.review-score-box{ padding: 2px 0 0 0; box-sizing: border-box; display: inline-block; width: 70%; position: relative; height: 34px;}
 .review-item{ display: inline-block; position: relative; margin: 0 0 0 5px; padding-right: 10px; text-align: center; height: 28px;}
 .review-item:hover{  border-radius: 8px; color: slateblue;}
 .review-item > label:hover{color: slateblue;}
 .review-item >label{ cursor: pointer;}
+.booking-date{display: flex; float: right; height: 50px; width: 30%; flex-direction: column; text-align: center; font-size: 14px;}
 .write-review-btn{margin-top:20px;width: 100%;}
 .write-review-btn>input{width: 100%;height: 50px;border: 0;outline: none; font-size: 24px; border-radius: 40px;background: linear-gradient(to left, rgb(255, 77, 46), slateblue);color: white;letter-spacing: 2px; cursor: pointer;}
 
