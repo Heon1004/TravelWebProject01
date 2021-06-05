@@ -39,7 +39,6 @@
                         <ul class="submenu">
                             <li class="item"><button type="button" class="tab-link active" onclick="changeManagerTap(event,'manager-list')">リスト</button></li>
                             <li class="item"><button type="button" class="tab-link" onclick="changeManagerTap(event,'manager-add')">登録</button></li>
-                            <li class="item"><button type="button" class="tab-link" onclick="changeManagerTap(event,'manager-delete')">削除</button></li>
                         </ul>
                     </li>
                     <li class="side-item"><button type="button" id="side-item-title">お知らせ管理</button>
@@ -59,8 +58,8 @@
         <div class="main-con">
             <div class="content-con">
                 <div class="manager-content" id="manager-list">
-                    <div class="content-title"><h2>ホテルマネージャリスト</h2>
-                        <form action="" class="list-form">
+                    <div class="content-title">ホテルマネージャリスト
+                        <form action="">
                             <div class="search-manager">
                                 <select name="search-type">
                                     <option value="managercode">管理者コード</option>
@@ -74,56 +73,139 @@
                         </form>
                     </div>
                     <div class="list-content">
-                        <table>
-                            <tr>
-                                <th>ホテルコード</th>
-                                <th>マネージャコード</th>
-                                <th>ホテル名</th>
-                                <th>メール</th>
-                                <th>登録日</th>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>5</td>
-                                <td>新宿ホテル</td>
-                                <td>admin@admin.jp</td>
-                                <td>2021年9月10日</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>5</td>
-                                <td>新宿ホテル</td>
-                                <td>admin@admin.jp</td>
-                                <td>2021年9月10日</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>5</td>
-                                <td>新宿ホテル</td>
-                                <td>admin@admin.jp</td>
-                                <td>2021年9月10日</td>
-                            </tr>
-                        </table>
-                        <div class="page-con">
-                            <a href="" class="before-btn">≪</a>
-                            <a href="" class="page-btn active">1</a>
-                            <a href="" class="page-btn">2</a>
-                            <a href="" class="page-btn">3</a>
-                            <a href="" class="page-btn">4</a>
-                            <a href="" class="page-btn">5</a>
-                            <a href="" class="next-btn">≫</a>
-                        </div>
+                        <form action="">
+                            <div class="list-item">
+                                <div class="company-item">会社コード
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">マネージャコード
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">ホテル名
+                                    <span>新宿ホテル</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">メール
+                                    <span>shinjuku@hotel.com</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">会社電話番号
+                                    <span>02-666-888</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">会社住所
+                                    <span>7-10-5 西新宿 新宿区 東京都 160-0023</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">登録日
+                                    <span>2021年06月05日</span>
+                                </div>
+                            </div>
+                            <div class="list-item-btn">
+                                <input type="submit" class="delete-btn" value="削除">
+                                <input type="submit" class="update-btn" value="変更">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list-content">
+                        <form action="">
+                            <div class="list-item">
+                                <div class="company-item">会社コード
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">マネージャコード
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">ホテル名
+                                    <span>新宿ホテル</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">メール
+                                    <span>shinjuku@hotel.com</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">会社電話番号
+                                    <span>02-666-888</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">会社住所
+                                    <span>7-10-5 西新宿 新宿区 東京都 160-0023</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">登録日
+                                    <span>2021年06月05日</span>
+                                </div>
+                            </div>
+                            <div class="list-item-btn">
+                                <input type="submit" class="delete-btn" value="削除">
+                                <input type="submit" value="変更">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="page-con">
+                        <a href="" class="before-btn">≪</a>
+                        <a href="" class="page-btn active">1</a>
+                        <a href="" class="page-btn">2</a>
+                        <a href="" class="page-btn">3</a>
+                        <a href="" class="page-btn">4</a>
+                        <a href="" class="page-btn">5</a>
+                        <a href="" class="next-btn">≫</a>
                     </div>
                 </div>
                 <div class="manager-content" id="manager-add">
                     <div class="add-content-box">
-                        add-contentdsa
-
+                        <div class="content-title">マネージャー登録</div>
+                        <div class="add-content">
+                            <form action="" method="">
+                                <div>
+                                    <span>会社名</span>
+                                    <input type="text" name="add-manager-company" placeholder="CompanyName">
+                                </div>
+                                <div>
+                                    <span>メールアドレス</span>
+                                    <input type="text" name="add-manager-email" placeholder="Email">
+                                </div>
+                                <div>
+                                    <span>パスワード</span>
+                                    <input type="password" name="add-manager-pw" placeholder="Password">
+                                </div>
+                                <div>
+                                    <span>確認パスワード</span>
+                                    <input type="password" name="add-manager-checkpw" placeholder="Password">
+                                </div>
+                                <div>
+                                    <span>会社電話番号</span>
+                                    <input type="text" name="add-manager-tel" placeholder="Telephone">
+                                </div>
+                                <div>
+                                    <span>会社住所</span>
+                                    <input type="text" name="add-manager-address" placeholder="Address">
+                                </div>
+                                <div class="system-msg">
+                                    msg
+                                </div>
+                                <div class="submit-btn">
+                                    <button type="submit">登録</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    
-                </div>
-                <div class="manager-content" id="manager-delete">
-                    delete-content
                 </div>
             </div>
         </div>
