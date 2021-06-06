@@ -17,17 +17,84 @@
             <span><a href="../index.html" class="logo-con-link">旅行はここ</a></span>
         </div>
         <div class="func_con">
-            <div class="ordersearch-btn"><a href="">予約照会・変更・キャンセル</a></div>
+            <div class="ordersearch-btn"><a href="./Member/mypage.html">予約照会・変更・キャンセル</a></div>
             <div class="notice-btn"><a href="">お知らせ</a></div>
             <div class="account-con">
-                <span class="login-btn" ><a href="../Member/login.html" class="account-button">ログイン</a></span>
-                <span class="register-btn"><a href="#" class="account-button">会員登録</a></span>
+                <span><button type="button" class="account-btn" onclick="openloginModal()">ログイン</button></span>
+                <span><button type="button" class="account-btn" onclick="openregisterModal()">会員登録</button></span>
             </div>
         </div>
-        <div class="mark-con">
-            <div class="mark-item"><span class="num">1</span><span class="mark-item-active">ルーム選択</span>></div>
-            <div class="mark-item"><span class="num">2</span><span class="mark-item-active">予約情報</span>></div>
-            <div class="mark-item"><span class="num-null">3</span><span class="mark-item-null">決済</span></div>
+    </div>
+    <div class="login-modal-con" id="login-modal-con">
+        <div class="login-modal">
+            <form action="">
+                <button class="close-btn" type="button" onclick="closeloginModal()">X</button>
+                <h2>ログイン</h2>
+                <div class="login-email">
+                    <h4>メールアドレス</h4>
+                    <input type="email" name="" placeholder="Email" autocomplete="off">
+                </div>
+                <div class="login-pw">
+                    <h4>パスワード</h4>
+                    <input type="password" name="" placeholder="Password">
+                </div>
+                <div class="login-etc">
+                    <div class="forgot-pw">
+                        <button type="button" id="forgot-link" >ID又はPasswordを忘れた場合</button>
+                    </div>
+                    <div class="register-link">
+                        <button type="button" id="register-link">アカウントを作成</button>
+                    </div>
+                </div>
+                <div class="login-submit">
+                    <input type="submit" value="ログイン">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div  class="register-modal-con" id="register-modal-con" >
+        <div class="register-modal">
+            <form action="">
+                <button type="button" class="close-btn"  onclick="closeregisterModal()">X</button>
+                <h2>アカウント作成</h2>
+                <div class="register-item">
+                    <h4>氏名</h4>
+                    <input type="text" name="" placeholder="鈴木太郎" autocomplete="off">
+                </div>
+                <div class="register-item">
+                    <h4>メールアドレス</h4>
+                    <input type="email" name="" placeholder="Email" autocomplete="off">
+                </div>
+                <div class="register-item">
+                    <h4>パスワード</h4>
+                    <input type="password" name=""placeholder="Password">
+                </div>
+                <div class="register-item">
+                    <h4>確認パスワード</h4>
+                    <input type="password" name="" placeholder="Re-enter-Password">
+                </div>
+                <div class="forgot-pw">
+                    <button type="button" id="login-link">既にアカウントがある方ログイン</button>
+                </div>
+                <div class="register-submit">
+                    <input type="submit" value="アカウントを作成">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div  class="forgot-modal-con" id="forgot-modal-con" >
+        <div class="forgot-modal">
+            <form action="">
+                <button type="button" class="close-btn"  onclick="closeforgotModal()">X</button>
+                <h2>パスワードアシスタント</h2>
+                <div class="forgot-item">
+                    <h4>メールアドレス</h4>
+                    <input type="email" name="" placeholder="Email" autocomplete="off">
+                </div>
+                <div class="forgot-submit">
+                    <input type="submit" value="次に進む">
+                </div>
+            </form>
         </div>
     </div>
 </header>
@@ -64,37 +131,39 @@
                 </div>
             </div>
             <div class="user-date-con">
-                <div class="date-info">
-                    <div class="date-items"><span>チェックイン</span><input type="date" name="start-date" id="start-date" ></div>
-                    <div class="nights">1泊</div>
-                    <div class="date-items"><span>チェックアウト</span><input type="date" name="end-date" id="end-date"></div>
-                        <div class="date-items"><span>残りルーム</span><div class="room-count">3</div></div>
-                    </div>
-                    <div class="guest-info">
-                        <div class="guest-title"><h3>宿泊客氏名</h3></div>
-                        <div class="guest-remark">宿泊客の名前はチェックインの際に提示する身分証明書の名前と同じように入力してください。</div>
-                        <div class="guest-name-con">
-                            <label>姓<div class="frist-name"><input type="text"  placeholder="例:鈴木"></div></label>
-                            <div class="margin-name-con"></div>
-                            <label>名前<div class="last-name"><input type="text"  placeholder="例:太郎"></div></label>
+                <form action="">
+                    <div class="date-info">
+                        <div class="date-items"><span>チェックイン</span><input type="date" name="start-date" id="start-date" ></div>
+                        <div class="nights">1泊</div>
+                        <div class="date-items"><span>チェックアウト</span><input type="date" name="end-date" id="end-date"></div>
+                            <div class="date-items"><span>残りルーム</span><div class="room-count">3</div></div>
                         </div>
-                        <div class="guest-add-con"><label><button>+</button>宿泊客追加</label></div>
-                        <div class="guest-email-con">
-                            <label>メールアドレス<div class="guest-email"><input type="email" placeholder="メールアドレス"></div></label>
+                        <div class="guest-info">
+                            <div class="guest-title"><h3>宿泊客氏名</h3></div>
+                            <div class="guest-remark">宿泊客の名前はチェックインの際に提示する身分証明書の名前と同じように入力してください。</div>
+                            <div class="guest-name-con">
+                                <label>姓<div class="frist-name"><input type="text"  placeholder="例:鈴木" autocomplete="off"></div></label>
+                                <div class="margin-name-con"></div>
+                                <label>名前<div class="last-name"><input type="text"  placeholder="例:太郎" autocomplete="off"></div></label>
+                            </div>
+                            <div class="guest-add-con"><label><button>+</button>宿泊客追加</label></div>
+                            <div class="guest-email-con">
+                                <label>メールアドレス<div class="guest-email"><input type="email" placeholder="メールアドレス" autocomplete="off"></div></label>
+                            </div>
+                            <div class="guest-tel-con">
+                                <label>電話番号<div class="guest-tel"><input type="text" placeholder="電話番号" autocomplete="off"></div></label>
+                            </div>
                         </div>
-                        <div class="guest-tel-con">
-                            <label>電話番号<div class="guest-tel"><input type="text" placeholder="電話番号"></div></label>
+                        <div class="arrival-con">
+                            <h3>チェックイン時間</h3>
+                            <p>最速のチェックイン時間は15:00です。 以前到着した場合、待ち時間がかかる場合があります。</p>
+                        </div>
+                        <div class="payment-btn-con">
+                            <label class="agreement-content"><input type="checkbox"> 予約をご希望の際は、ご利用規約及び個人情報の取り扱い方針を読み、これに同意します。</label>
+                            <button class="do-pay-btn" type="submit">決済する</button>
                         </div>
                     </div>
-                    <div class="arrival-con">
-                        <h3>チェックイン時間</h3>
-                        <p>最速のチェックイン時間は15:00です。 以前到着した場合、待ち時間がかかる場合があります。</p>
-                    </div>
-                    <div class="payment-btn-con">
-                        <p class="agreement-content"><input type="checkbox"> 予約をご希望の際は、ご利用規約及び個人情報の取り扱い方針を読み、これに同意します。</p>
-                        <button class="do-pay-btn">決済する</button>
-                    </div>
-                </div>
+                </form>
                 <div class="before-page-btn"><a href="javascript:history.back();">＜ 戻る</a></div>
             </div>
         </div>
@@ -102,6 +171,7 @@
     
 <!--Jquery CDN JqueryがJSより上にする-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common-jquery.js"></script>
 <!--このようにするのかわからない。。。-->
 <script type="text/javascript" src="../js/hotel_payment.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../js/common.js" charset="UTF-8"></script>

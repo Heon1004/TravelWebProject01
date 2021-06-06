@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/hotel_admin.css">
     <!--Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
         <div class="logo-con">
             <span><a href="../index.html" class="logo-con-link">旅行はここ</a></span>
         </div>
-        <div class="nav-title">Web管理ページ</div>
+        <div class="nav-title">ホテル管理システム</div>
         <div class="myaccount-con">
             <ul class="account-drop">
                 <li class="drop-item"><button type="button">admin様</button>
@@ -35,13 +35,13 @@
         <div class="home-con">
             <div class="side-bar-con">
                 <ul class="side-nav">
-                    <li class="side-item"><button type="button" id="side-item-title">ホテルマネージャ</button>
+                    <li class="side-item"><button type="button" id="side-item-title">ホテル</button>
                         <ul class="submenu">
-                            <li class="item"><button type="button" class="tab-link active" onclick="changeManagerTap(event,'manager-list')">顧客リスト</button></li>
-                            <li class="item"><button type="button" class="tab-link" onclick="changeManagerTap(event,'manager-add')">顧客登録</button></li>
+                            <li class="item"><button type="button" class="tab-link active" onclick="changeHotelTap(event,'hotel-list')">ホテルリスト</button></li>
+                            <li class="item"><button type="button" class="tab-link" onclick="changeHotelTap(event,'hotel-add')">ホテル登録</button></li>
                         </ul>
                     </li>
-                    <li class="side-item"><button type="button" id="side-item-title">お知らせ管理</button>
+                    <li class="side-item"><button type="button" id="side-item-title">顧客管理</button>
                         <ul class="submenu">
                             <li><button type="button" class="tab-link">リスト</button></li> 
                             <li><button type="button" class="tab-link">登録</button></li>
@@ -57,20 +57,18 @@
             </div>
         <div class="main-con">
             <div class="content-con">
-                <div class="manager-content" id="manager-list">
+                <div class="hotel-content" id="hotel-list">
                     <form action="">
-                        <div class="content-title">ホテルマネージャリスト
-                            <div class="search-manager">
-                                <select name="search-type">
-                                    <option value="managercode">管理者コード</option>
-                                    <option value="hotelname">ホテル名</option>
-                                    <option value="email">メールアドレス</option>
-                                    <option value="tel">電話番号</option>
-                                </select>
-                                <input type="text">
-                                <input type="submit" value="検索">
-                            </div>
+                    <div class="content-title">ホテルリスト
+                        <div class="search-hotel">
+                            <select name="search-type">
+                                <option value="hotelCode">ホテルコード</option>
+                                <option value="hotelName">ホテル支店名</option>
+                            </select>
+                            <input type="text">
+                            <input type="submit" value="検索">
                         </div>
+                    </div>
                     </form>
                     <div class="list-content">
                         <form action="">
@@ -80,38 +78,59 @@
                                 </div>
                             </div>
                             <div class="list-item">
-                                <div class="company-item">会社コード
-                                    <span>1</span>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="company-item">マネージャコード
+                                <div class="company-item">ホテルコード
                                     <span>5</span>
                                 </div>
                             </div>
                             <div class="list-item">
-                                <div class="company-item">会社名
+                                <div class="company-item">ホテル名
                                     <span>新宿ホテル</span>
                                 </div>
                             </div>
                             <div class="list-item">
-                                <div class="company-item">メールアドレス
-                                    <span>shinjuku@hotel.com</span>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="company-item">会社電話番号
-                                    <span>02-666-888</span>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="company-item">会社住所
+                                <div class="company-item">住所
                                     <span>7-10-5 西新宿 新宿区 東京都 160-0023</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">レビュー
+                                    <span>3.5/4.5</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="company-item">本日予約数
+                                    <span>20件</span>
+                                </div>
+                            </div>
+                            <div class="img-item">
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-outside-1-01.jpg" alt="">
+                                </div>
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-room-1-01.jpg" alt="">
+                                </div>
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-room-1-03.jpg" alt="">
+                                </div>
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-room-1-02.jpg" alt="">
+                                </div>
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-room-1-04.jpg" alt="">
+                                </div>
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-room-1-05.jpg" alt="">
+                                </div>
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-room-1-06.jpg" alt="">
+                                </div>
+                                <div class="img-view">
+                                    <img src="../images/hotel-img/hotel1/hotel-room-1-07.jpg" alt="">
                                 </div>
                             </div>
                             <div class="list-item-btn">
                                 <input type="submit" class="delete-btn" value="削除">
-                                <input type="submit" class="update-btn" value="変更">
+                                <input type="submit" value="変更">
                             </div>
                         </form>
                     </div>
@@ -125,34 +144,35 @@
                         <a href="" class="next-btn">≫</a>
                     </div>
                 </div>
-                <div class="manager-content" id="manager-add">
+                <div class="hotel-content" id="hotel-add">
                     <div class="add-content-box">
-                        <div class="content-title">マネージャー登録</div>
+                        <div class="content-title">ホテル登録</div>
                         <div class="add-content">
                             <form action="" method="">
-                                <div>
-                                    <span>会社名</span>
-                                    <input type="text" name="add-manager-company" placeholder="CompanyName" autocomplete="off">
+                                <div class="add-content-item">
+                                    <span>ホテル名</span>
+                                    <input type="text" name="add-manager-company" placeholder="支店名・ホテル名" autocomplete="off">
                                 </div>
-                                <div>
-                                    <span>メールアドレス</span>
-                                    <input type="email" name="add-manager-email" placeholder="Email" autocomplete="off">
+                                <div class="add-content-item">
+                                    <span>ホテル住所</span>
+                                    <input type="text" name="add-manager-address" placeholder="住所" autocomplete="off">
                                 </div>
-                                <div>
-                                    <span>パスワード</span>
-                                    <input type="password" name="add-manager-pw" placeholder="Password" maxlength="16">
-                                </div>
-                                <div>
-                                    <span>確認パスワード</span>
-                                    <input type="password" name="add-manager-checkpw" placeholder="Password">
-                                </div>
-                                <div>
-                                    <span>会社電話番号</span>
+                                <div class="add-content-item">
+                                    <span>支店電話番号</span>
                                     <input type="text" name="add-manager-tel" placeholder="Telephone" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
                                 </div>
-                                <div>
-                                    <span>会社住所</span>
-                                    <input type="text" name="add-manager-address" placeholder="Address" autocomplete="off">
+                                <div class="add-content-img-btn">
+                                    <span>写真登録</span>
+                                    <button type="button" id="remove-img" onclick="deleteImg()">-</button>
+                                    <button type="button" id="add-img" onclick="addImg()">+</button>
+                                </div>
+                                <div class="img-con" id="img-con">
+                                    <div class="img-box" id="img-box-1">
+                                        <div class="img-preview">
+                                            <img id="img">
+                                        </div>
+                                        <input type="file" id="img-file" name="imageSelector" onchange="setThumbnail(event);" accept="image/jpeg, image/jpg, image/png" multiple />
+                                    </div>
                                 </div>
                                 <div class="system-msg">
                                     msg
@@ -179,7 +199,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../js/common-jquery.js"></script>
 <!--このようにするのかわからない。。。-->
-<script type="text/javascript" src="../js/admin.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/hotel_admin.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../js/common.js" charset="UTF-8"></script>
 </body>
 </html>
