@@ -24,9 +24,9 @@ $(document).ready(function(){
     });
 });
 
-function changeHotelTap(event, tabName) {
+function openTap(event, tabName) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("hotel-content");
+    tabcontent = document.getElementsByClassName("tap-content");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
@@ -38,52 +38,90 @@ function changeHotelTap(event, tabName) {
     event.currentTarget.className += " active";
 }
 
-function imgcount(id){
-    var img = ['remove-img','add-img'];
-    var check = ['Room','Adult','Child']
-    var add = 'add';
-    var remove = 'remove';
-    for(var i=0; i<img.length; i++){
-      if(id === remove+check[i]){
-        var num = document.getElementById(img[i]).value;
-        if(num > 0){
-          var result = parseInt(num)-1;
-          document.getElementById(img[i]).value = result;
-        }
-      }else if(id === add+check[i]){
-        var num = document.getElementById(img[i]).value;
-        var result = parseInt(num)+1;
-        document.getElementById(img[i]).value = result;
+function filecheck(){
+  var imgFile = $('#imgfile').val();
+  var fileForm = /(.*?)\.(jpg|jpeg|png)$/; //pdf,bmp,gifもできる
+  var maxSize = 5 * 1024 * 1024;
+  var fileSize;
+  
+  if(imgFile != "" && imgFile != null) {
+    fileSize = document.getElementById("imgfile").files[0].size;
+      if(!imgFile.match(fileForm)) {
+        alert("写真だけ添付可能です");
+          return document.getElementById("imgfile").value = "";
+      } else if(fileSize == maxSize) {
+        alert("ファイルサイズは5mbまでです。");
+          return document.getElementById("imgfile").value = "";
       }
-    }
   }
-  var imgNum = 1;
-  function addImg() {
-    imgNum++;
-    const element = document.getElementById('img-con');
-    element.innerHTML += "<div class='img-box' id='img-box-"+imgNum+"'>"
-    +"<div class='img-preview'><img id=''></div>"
-    +"<input type='file' id='img-file' name='imageSelector' onchange='setThumbnail(event);' accept='image/jpeg, image/jpg, image/png' multiple /></div>";
-  }
-
-  function deleteImg() {
-    if(imgNum > 1){
-        var imgbox= "img-box-"+imgNum;
-        var element = document.getElementById('img-con');
-        //最後の要素を消す
-        element.removeChild(element.lastChild);
-        imgNum--;
-        }
-  } 
-
-  function setThumbnail(event) {
-    var reader = new FileReader(); 
-    reader.onload = function(event) { 
-        var check = document.getElementById('img');
-            var img = document.createElement("img"); 
-            img.setAttribute("src", event.target.result); 
-            document.querySelector(".img-preview").appendChild(img); 
-       
-    }; 
-    reader.readAsDataURL(event.target.files[0]); 
 }
+//img Preview
+function readURL(input) {
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+          $('#imgPreview').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// 등록 이미지 삭제 ( input file reset )
+function resetInputFile($input, $preview) {
+  var agent = navigator.userAgent.toLowerCase();
+  if((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+      // ie 일때
+      $input.replaceWith($input.clone(true));
+      $preview.empty();
+  } else {
+      //other
+      $input.val("");
+      $preview.empty();
+  }       
+}
+
+$(".btn-imgdelete").click(function(event) {
+  var $input = $(".inp-img");
+  var $preview = $('#img-preview');
+  resetInputFile($input, $preview);
+});
+
+var sel_files = [];
+
+	$(document).ready(function() {
+		$("#imgfile").on("change", handleImgsFilesSelect);
+	});
+
+	function handleImgsFilesSelect(e){
+		var files = e.target.files;
+		var filesArr = Array.prototype.slice.call(files);
+
+		filesArr.forEach(function(f) {
+			sel_files.push(f);
+			var reader = new FileReader();
+			reader.onload = function(e){
+				var img_html = "<img src=\""+e.target.result+"\" />";
+				$(".img-preview").append(img_html);
+			}
+			reader.readAsDataURL(f);
+		});
+	}
+
+  window.onload = function() {
+
+    let today = new Date();
+    let endDay = today;
+  
+    //ブラウザで時刻差が9時間あるため足す
+    today.setHours(today.getHours()+9);
+    today = today.toISOString().slice(0, 10);
+    endDay.setDate(endDay.getDate()+7);
+    endDay = endDay.toISOString().slice(0, 10);
+    //チェックイン日付を設定
+    start = document.getElementById("start-date");
+    start.value = today;
+  
+    //チェックアウト日付を設定
+    end = document.getElementById("end-date");
+    end.value = endDay;
+  }

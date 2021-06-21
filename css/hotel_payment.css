@@ -6,6 +6,9 @@
 .mark-item>.num {margin:0 10px; background-color: slateblue; color: white; width: 25px; text-align: center; border-radius: 20px;}
 .mark-item>.num-null{margin:0 10px; background-color: gray; color: white; width: 25px; text-align: center; border-radius: 20px;}
 .mark-item-null{color: gray;}
+.mark-item:last-child::after{content: none;}
+.mark-item:last-child{color: gray;}
+.mark-item::after{content: ">";}
 
 /*content*/
 .payment-con{width: 1177px; height: 100%; margin: 0 150px; display: inline-block; position: relative;}

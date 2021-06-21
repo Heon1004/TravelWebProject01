@@ -37,27 +37,21 @@
                 <ul class="side-nav">
                     <li class="side-item"><button type="button" id="side-item-title">ホテル</button>
                         <ul class="submenu">
-                            <li class="item"><button type="button" class="tab-link active" onclick="changeHotelTap(event,'hotel-list')">ホテルリスト</button></li>
-                            <li class="item"><button type="button" class="tab-link" onclick="changeHotelTap(event,'hotel-add')">ホテル登録</button></li>
+                            <li class="item"><button type="button" class="tab-link active" onclick="openTap(event,'hotel-list')">ホテルリスト</button></li>
+                            <li class="item"><button type="button" class="tab-link" onclick="openTap(event,'hotel-add')">ホテル登録</button></li>
                         </ul>
                     </li>
-                    <li class="side-item"><button type="button" id="side-item-title">顧客管理</button>
+                    <li class="side-item"><button type="button" id="side-item-title">管理システム</button>
                         <ul class="submenu">
-                            <li><button type="button" class="tab-link">リスト</button></li> 
-                            <li><button type="button" class="tab-link">登録</button></li>
-                        </ul>
-                    </li>
-                    <li class="side-item"><button type="button" id="side-item-title">社員登録</button>
-                        <ul class="submenu">
-                            <li><button type="button" class="tab-link">リスト</button></li> 
-                            <li><button type="button" class="tab-link">登録</button></li>
+                            <li><button type="button" class="tab-link" onclick="openTap(event,'customer-list')">予約リスト</button></li> 
+                            <li><button type="button" class="tab-link" onclick="openTap(event,'booking-count')">集計</button></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         <div class="main-con">
             <div class="content-con">
-                <div class="hotel-content" id="hotel-list">
+                <div class="tap-content" id="hotel-list">
                     <form action="">
                     <div class="content-title">ホテルリスト
                         <div class="search-hotel">
@@ -72,34 +66,29 @@
                     </form>
                     <div class="list-content">
                         <form action="">
-                            <div class="list-item">
+                            <div class="hotel-list-item">
                                 <div class="company-item">登録日
                                     <span>2021年06月05日</span>
                                 </div>
                             </div>
-                            <div class="list-item">
+                            <div class="hotel-list-item">
                                 <div class="company-item">ホテルコード
                                     <span>5</span>
                                 </div>
                             </div>
-                            <div class="list-item">
+                            <div class="hotel-list-item">
                                 <div class="company-item">ホテル名
                                     <span>新宿ホテル</span>
                                 </div>
                             </div>
-                            <div class="list-item">
+                            <div class="hotel-list-item">
                                 <div class="company-item">住所
                                     <span>7-10-5 西新宿 新宿区 東京都 160-0023</span>
                                 </div>
                             </div>
-                            <div class="list-item">
+                            <div class="hotel-list-item">
                                 <div class="company-item">レビュー
                                     <span>3.5/4.5</span>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="company-item">本日予約数
-                                    <span>20件</span>
                                 </div>
                             </div>
                             <div class="img-item">
@@ -144,7 +133,7 @@
                         <a href="" class="next-btn">≫</a>
                     </div>
                 </div>
-                <div class="hotel-content" id="hotel-add">
+                <div class="tap-content" id="hotel-add">
                     <div class="add-content-box">
                         <div class="content-title">ホテル登録</div>
                         <div class="add-content">
@@ -161,17 +150,14 @@
                                     <span>支店電話番号</span>
                                     <input type="text" name="add-manager-tel" placeholder="Telephone" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
                                 </div>
-                                <div class="add-content-img-btn">
-                                    <span>写真登録</span>
-                                    <button type="button" id="remove-img" onclick="deleteImg()">-</button>
-                                    <button type="button" id="add-img" onclick="addImg()">+</button>
-                                </div>
+                                
                                 <div class="img-con" id="img-con">
-                                    <div class="img-box" id="img-box-1">
-                                        <div class="img-preview">
-                                            <img id="img">
+                                    <div class="img-box" id="img-box">
+                                        <div class="img-preview" id="img-preview">
+                                            
                                         </div>
-                                        <input type="file" id="img-file" name="imageSelector" onchange="setThumbnail(event);" accept="image/jpeg, image/jpg, image/png" multiple />
+                                        <button type="button" class="btn-imgdelete" id="btn-imgdelete">削除</button>
+                                        <input type="file" class="inp-img" id="imgfile" onchange="filecheck();" accept="image/jpeg, image/jpg, image/png" multiple />
                                     </div>
                                 </div>
                                 <div class="system-msg">
@@ -182,6 +168,74 @@
                                 </div>
                             </form>
                         </div>
+                    </div>
+                </div>
+                <div class="tap-content" id="customer-list">
+                    <form action="">
+                    <div class="content-title">予約リスト
+                        <div class="search-hotel">
+                            <select name="search-type">
+                                <option value="bookingNum">予約番号</option>
+                                <option value="hotelName">ホテル名</option>
+                                <option value="userName">氏名</option>
+                                <option value="userEmail">メールアドレス</option>
+                            </select>
+                            <input type="text">
+                            <button type="submit">検索</button>
+                        </div>
+                        <div class="list-tap-nav">
+                            <a href="" class="list-nav-item active">本日予約</a>
+                            <a href="" class="list-nav-item">全部</a>
+                            <div class="select-date">
+                                <form action="">
+                                    <span>期間選択</span>
+                                    <input type="date" id="start-date" name="start-date">
+                                    <span>~</span>
+                                    <input type="date" id="end-date" name="end-date">
+                                    <button type="submit">検索</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    <div class="search-result">検索結果 : 100件</div>
+                    <div class="booking-list">
+                        <table>
+                            <tr>
+                                <th>予約番号</th>
+                                <th>ホテル名</th>
+                                <th>氏名</th>
+                                <th>メールアドレス</th>
+                                <th>ゲスト数</th>
+                                <th colspan="2">予約日</th>
+                            </tr>
+                            <tr>
+                                <td>31285234</td>
+                                <td>新宿ホテル</td>
+                                <td>watanabe</td>
+                                <td>dsagfjfkdsdf@ffdslds.com</td>
+                                <td>大人3 / 子供2</td>
+                                <td>2021/6/21</td>
+                                <td><button><a href="">詳細</a></button></td>
+                            </tr>
+                            <tr>
+                                <td>31285234</td>
+                                <td>新宿ホテル</td>
+                                <td>watanabe</td>
+                                <td>dsagfjfkdsdf@ffdslds.com</td>
+                                <td>大人3 / 子供2</td>
+                                <td>2021/6/21</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="page-con">
+                        <a href="" class="before-btn">≪</a>
+                        <a href="" class="page-btn active">1</a>
+                        <a href="" class="page-btn">2</a>
+                        <a href="" class="page-btn">3</a>
+                        <a href="" class="page-btn">4</a>
+                        <a href="" class="page-btn">5</a>
+                        <a href="" class="next-btn">≫</a>
                     </div>
                 </div>
             </div>
