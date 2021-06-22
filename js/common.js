@@ -32,4 +32,3 @@ document.getElementById('login-link').addEventListener('click', function () {
   document.getElementById('register-modal-con').style.display = 'none';
   document.getElementById('login-modal-con').style.display = 'block';
 });
-

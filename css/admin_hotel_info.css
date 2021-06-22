@@ -1,0 +1,14 @@
+.container{height: 100%; margin: 0 150px; position: relative; display: inline-block; box-sizing: border-box; }
+.nav-title{left: 550px; display: inline-block; margin: 5px 0 0 0; font-size: 26px; font-weight: bold; position: relative; text-align: center; }
+.content{width: 1150px; height: 100%; background-color: white; display: block; margin: 15px 0; padding: 10px;}
+.content-title{font-size: 20px; line-height: 40px; display: flex;}
+.content-title span::after{float: right; content: ":";}
+.content-title span{width: 150px;}
+
+.content-item{padding: 0 20px;}
+
+.content-btn{float : right;}
+.content>button{cursor: pointer; margin-top: 30px; width: 80px;}
+
+.content-btn button{cursor: pointer; margin-top: 30px; width: 80px;}
+.content-btn a{color: black;}

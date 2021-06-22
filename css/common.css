@@ -82,7 +82,7 @@ a, div.notice-title, div.notice-item{text-decoration:none;}
 .nav-item a{color: black; font-weight: 600;}
 .nav-item a:hover{color: slateblue; }
 .nav-item:hover{border-bottom: 3px solid slateblue; }
-.nav-link.active{color: #fff; color: slateblue;  border-bottom: 3px solid slateblue;}
+.nav-item.active{padding: 0 10px 0 10px; list-style:none; position: relative; text-align: left; display: table-cell; font-size: 18px;color: #fff; color: slateblue;  border-bottom: 3px solid slateblue;}
 /*border用*/
 #nav-hotel{border-left: 1px solid black; padding-left: 10px;}
 
