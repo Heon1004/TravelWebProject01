@@ -47,7 +47,7 @@ label{text-align: left; width: auto;}
 /*info-items*/
 .hotel-info-con{display: inline-flex; position: relative; float: right; background-color: white; margin-bottom: 5px; width: 910px; height: 250px; }
 .info-img-con{position: relative; display: inline-block; width: 100%; margin: 10px; height: auto; background-color: black;}
-.info-hotel-img{display: inline-flex; height: 100%; width: 100%; position: relative;  background-size: contain; background-repeat: no-repeat;}
+.info-hotel-img{display: inline-flex; height: 100%; width: 100%; position: relative;  background-size: cover; background-repeat: no-repeat;}
 .hotel-info-box{width: 100%;  display: inline-block;  position: relative; margin: 10px 0;}
 .hotel-info-title{display: inline-flex; position: relative; height: 40px; width: 200px; margin-top: 15px; text-align: left; float: left;}
 .hotel-info-title>span>a{ margin: 0 0 0 5px; font-size: 24px; font-weight: 500; color: black;}

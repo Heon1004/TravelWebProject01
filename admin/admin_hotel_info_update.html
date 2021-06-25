@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/admin_hotel_info.css">
+    <link rel="stylesheet" href="../css/admin_hotel_info_update.css">
     <!--Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
@@ -32,12 +32,13 @@
 </header>
 <main>
     <div class="container">
+        <form action="">
             <div class="content">
-                <h2>予約詳細</h2>
+                <h2>予約変更</h2>
                 <div class="content-title">
                     <span>予約番号</span>
                     <div class="content-item">
-                        3213123131
+                        <input type="text" name="bookingNum">
                     </div>
                 </div>
                 <div class="content-title">
@@ -90,10 +91,10 @@
                 </div>
                 <button type="button" onclick="history.back()">戻る</button>
                 <div class="content-btn">
-                    <button type="submit">削除</button>
-                    <button tpye="button" onclick="location.href='./admin_hotel_info_update.html'">変更</button>
+                    <button tpye="submit" onclick="">変更する</a></button>
                 </div>
             </div>
+        </form>
     </div>
 </main>
 <footer>
