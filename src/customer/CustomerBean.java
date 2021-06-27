@@ -4,19 +4,9 @@ public class CustomerBean {
 	private String customerNum;
 	private String customerEmail;
 	private String customerPw;
-	private boolean availableEmail;
+	private boolean availableEmail = false;
 	private String regDate;
 	
-	
-	
-	public CustomerBean(String customerNum, String customerEmail, String customerPw, boolean availableEmail,
-			String regDate) {
-		this.customerNum = customerNum;
-		this.customerEmail = customerEmail;
-		this.customerPw = customerPw;
-		this.availableEmail = availableEmail;
-		this.regDate = regDate;
-	}
 	public String getCustomerNum() {
 		return customerNum;
 	}

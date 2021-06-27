@@ -29,7 +29,8 @@
     </div>
         <div class="login-modal-con" id="login-modal-con">
             <div class="login-modal">
-                <form action="">
+                <form action="CustomerController" method="POST">
+                <input type="hidden" name="action" value="CustomerLogin">
                     <button class="close-btn" type="button" onclick="closeloginModal()">X</button>
                     <h2>ログイン</h2>
                     <div class="login-email">
@@ -56,20 +57,21 @@
         </div>
         <div  class="register-modal-con" id="register-modal-con" >
             <div class="register-modal">
-                <form action="">
+                <form action="CustomerController" method="POST">
+                <input type="hidden" name="action" value="CustomerJoin">
                     <button type="button" class="close-btn"  onclick="closeregisterModal()">X</button>
                     <h2>アカウント作成</h2>
                     <div class="register-item">
                         <h4>メールアドレス</h4>
-                        <input type="email" name="" placeholder="Email" autocomplete="off">
+                        <input type="email" name="CustomerEmail" placeholder="Email" autocomplete="off">
                     </div>
                     <div class="register-item">
                         <h4>パスワード</h4>
-                        <input type="password" name=""placeholder="Password">
+                        <input type="password" name="CustomerPw"placeholder="Password">
                     </div>
                     <div class="register-item">
                         <h4>確認パスワード</h4>
-                        <input type="password" name="" placeholder="Re-enter-Password">
+                        <input type="password" name="ReEtnerPw" placeholder="Re-enter-Password">
                     </div>
                     <div class="forgot-pw">
                         <button type="button" id="login-link">既にアカウントがある方ログイン</button>

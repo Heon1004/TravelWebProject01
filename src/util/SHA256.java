@@ -4,35 +4,28 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class SHA256 {
-	
-	 /**
-     * SHA-256으로 해싱하는 메소드
-     * 
-     * @param bytes
-     * @return
-     * @throws NoSuchAlgorithmException 
-     */
+	public static String getEncrypt(String email) {
+		String result = "";
+		
+		try {
+			MessageDigest md = MessageDigest.getInstance("SHA-256");
+			md.update(email.getBytes());
+			byte[] byteDate = md.digest();
+			StringBuffer sb = new StringBuffer();
+			//
+			for (int i = 0; i < byteDate.length; i++) {
+				//256bit = 64文字列 
+				//bitのlengthをHexに切り替える
+				//16進数
+				sb.append(Integer.toString((byteDate[i] & 0xFF) + 256, 16).substring(1));
+			}
+			
+			result = sb.toString();
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
 
+		return result;
+	}
 
-	public static String sha256(String msg) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance("SHA-256");
-        md.update(msg.getBytes());
-        
-        return bytesToHex(md.digest());
-    }
-
-	/**
-     * 바이트를 헥스값으로 변환한다
-     * 
-     * @param bytes
-     * @return
-     */
-    public static String bytesToHex(byte[] bytes) {
-        StringBuilder builder = new StringBuilder();
-        for (byte b: bytes) {
-          builder.append(String.format("%02x", b));
-        }
-        return builder.toString();
-    }
-    
 }
