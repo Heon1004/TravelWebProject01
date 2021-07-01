@@ -70,7 +70,7 @@ function setairDate(){
   start = document.getElementById("start-date-air");
   start.value = today;
   start.setAttribute("min", start.value);
-  
+
   //チェックアウト日付を設定
   end = document.getElementById("end-date-air");
   end.value = endDay;
@@ -108,22 +108,6 @@ function guestCount(id){
   }
 }
 let hotelDate = document.getElementById('start-date');
-
-function limitStartDate(){
-  document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);
-  /*下は過去の日付が選択できなくさせる*/
-  let [today] = new Date().toISOString().split("T"); /*エラー発生しても上手く動いてる*/
-  document.querySelector("input").setAttribute("min", today);
-
-}
-
-function limitEndDate(){
-  document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);
-  /*下は過去の日付が選択できなくさせる*/
-  let [today] = new Date().toISOString().split("T"); /*エラー発生しても上手く動いてる*/
-  document.querySelector("input").setAttribute("min", today);
-
-}
 
 /* 日数を数える */
 // var sdt = new Date('string_Date1');
