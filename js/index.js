@@ -44,15 +44,13 @@ function keepChecked(value){
   
   
 //ブラウザが開いたら実行される
+var today = new Date();
+var endDay = today;
 window.onload = function() {
-
-  let today = new Date();
-  let endDay = today;
 
   //ブラウザで時刻差が9時間あるため足す
   today.setHours(today.getHours()+9);
   today = today.toISOString().slice(0, 10);
-
   endDay.setDate(endDay.getDate()+1);
   endDay = endDay.toISOString().slice(0, 10);
   //チェックイン日付を設定
@@ -62,28 +60,32 @@ window.onload = function() {
   //チェックアウト日付を設定
   end = document.getElementById("end-date");
   end.value = endDay;
+  start.setAttribute("min", start.value);
+  end.setAttribute("min", end.value);
 }
 
 function setairDate(){
-  let today = new Date();
-  let endDay = today;
 
-  //ブラウザで時刻差が9時間あるため足す
-  today.setHours(today.getHours()+9);
-  today = today.toISOString().slice(0, 10);
-
-  endDay.setDate(endDay.getDate()+1);
-  endDay = endDay.toISOString().slice(0, 10);
   //チェックイン日付を設定
   start = document.getElementById("start-date-air");
   start.value = today;
-  start = document.getElementById("start-date-rentcar");
-  start.value = today;
+  start.setAttribute("min", start.value);
+  
   //チェックアウト日付を設定
   end = document.getElementById("end-date-air");
   end.value = endDay;
+  end.setAttribute("min", end.value);
+}
+
+function rentDate(){
+
+  start = document.getElementById("start-date-rentcar");
+  start.value = today;
+  start.setAttribute("min", start.value);
+
   end = document.getElementById("end-date-rentcar");
   end.value = endDay;
+  end.setAttribute("min", end.value);
 }
 
 function guestCount(id){
@@ -104,6 +106,23 @@ function guestCount(id){
       document.getElementById(guest[i]).value = result;
     }
   }
+}
+let hotelDate = document.getElementById('start-date');
+
+function limitStartDate(){
+  document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);
+  /*下は過去の日付が選択できなくさせる*/
+  let [today] = new Date().toISOString().split("T"); /*エラー発生しても上手く動いてる*/
+  document.querySelector("input").setAttribute("min", today);
+
+}
+
+function limitEndDate(){
+  document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);
+  /*下は過去の日付が選択できなくさせる*/
+  let [today] = new Date().toISOString().split("T"); /*エラー発生しても上手く動いてる*/
+  document.querySelector("input").setAttribute("min", today);
+
 }
 
 /* 日数を数える */

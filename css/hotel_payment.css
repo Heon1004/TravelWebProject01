@@ -38,8 +38,8 @@
 .guest-remark{font-size: 14px; color: black;}
 .guest-name-con{display: flex; width: 100%; position: relative; height: 100%;}
 .margin-name-con{margin-right: 100px;}
-.frist-name>input:focus , .last-name>input:focus{outline: none; border: 0;  border-bottom: 2px solid slateblue; margin-bottom: 2px;}
-.frist-name>input , .last-name>input{display: block; outline: none; border: 0; margin-bottom: 15px; block-size: 40px; font-size: 16px; border-bottom: 1px solid gray; width: 280px;}
+.frist-name>input:focus , .english-name>input:focus{outline: none; border: 0;  border-bottom: 2px solid slateblue; margin-bottom: 2px;}
+.frist-name>input , .english-name>input{display: block; outline: none; border: 0; margin-bottom: 15px; block-size: 40px; font-size: 16px; border-bottom: 1px solid gray; width: 280px;}
 .guest-add-con{margin-bottom: 15px; width: 150px;}
 .guest-add-con>label{cursor: pointer; font-weight: bold; font-size: 14px; line-height: 21px;}
 .guest-add-con>label>button{background-color: slateblue; border: none; color: white; font-size: 14px; border-radius: 25px; margin-right: 10px; cursor: pointer;}

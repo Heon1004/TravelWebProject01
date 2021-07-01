@@ -23,6 +23,17 @@
                 <span><button type="button" class="account-btn" onclick="openloginModal()">ログイン</button></span>
                 <span><button type="button" class="account-btn" onclick="openregisterModal()">会員登録</button></span>
             </div>
+            <div class="myaccount-con">
+	            <ul class="account-drop">
+	                <li class="drop-item"><button type="button">admin様</button>
+	                    <ul class="dropmenu">
+	                        <li class="item"><a href="">ログアウト</a></li>
+	                        <li class="item"><a href="">menu2</a></li>
+	                        <li class="item"><a href="">menu3</a></li>
+	                    </ul>
+	                </li>
+	            </ul>
+        	</div>
         </div>
     </div>
         <div class="login-modal-con" id="login-modal-con">
@@ -124,7 +135,7 @@
                 <div class="search-tap">
                     <div class="search-list"><button type="button" class="tab-link active" onclick="searchTap(event, 'hotel-tap');">ホテル</button></div>
                     <div class="search-list"><button type="button" class="tab-link" onclick="searchTap(event, 'airplane-tap');setairDate();">航空券</button></div>
-                    <div class="search-list"><button type="button" class="tab-link"onclick="searchTap(event, 'rentcar-tap');setairDate();">レンタカー</button></div>
+                    <div class="search-list"><button type="button" class="tab-link"onclick="searchTap(event, 'rentcar-tap');rentDate();">レンタカー</button></div>
                 </div>
                 <div class="search-con">
                     <div class="search-box">
@@ -312,9 +323,9 @@
 </div>
 <!--Jquery CDN JqueryがJSより上にする-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/common-jquery.js"></script>
+<script src="/js/common-jquery.js"></script>
 <!--このようにするのかわからない。。。-->
-<script type="text/javascript" src="./js/index.js" charset="UTF-8"></script>
-<script type="text/javascript" src="./js/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/index.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/common.js" charset="UTF-8"></script>
 </body>
 </html>
